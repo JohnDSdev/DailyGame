@@ -1,10 +1,87 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Why humans are surprisingly bad at inventing randomness — Daily Game</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f2efe6">
+<title>A fair coin is streakier than you think | Daily Game</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <style>
-:root{color-scheme:dark;--bg:#070b16;--text:#f3f6ff;--muted:#a4aec5;--line:rgba(255,255,255,.1);--accent:#8be9fd}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,rgba(93,65,170,.16),transparent 30rem),var(--bg);color:var(--text);font:17px/1.75 Georgia,serif}.wrap{width:min(760px,calc(100% - 32px));margin:auto}header{padding:28px 0 72px;font-family:Inter,system-ui,sans-serif}.back{color:#c8d3e8;text-decoration:none;font-weight:800;font-size:13px}main{padding-bottom:90px}.kicker{font:900 12px/1 Inter,system-ui,sans-serif;letter-spacing:.15em;color:var(--accent);text-transform:uppercase}.date{color:var(--muted);font:600 13px/1.4 Inter,system-ui,sans-serif;margin-top:12px}h1{font:850 clamp(42px,8vw,72px)/.98 Inter,system-ui,sans-serif;letter-spacing:-.055em;margin:16px 0 26px}h2{font:800 30px/1.15 Inter,system-ui,sans-serif;letter-spacing:-.03em;margin:54px 0 14px}p{color:#d7deed;margin:0 0 23px}.lead{font-size:21px;color:#b8c3d9}.callout{margin:38px 0;padding:24px 26px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035);font:650 18px/1.55 Inter,system-ui,sans-serif}.chips{display:flex;gap:9px;flex-wrap:wrap;margin:28px 0}.chip{font:750 12px/1 Inter,system-ui,sans-serif;border:1px solid var(--line);border-radius:999px;padding:9px 11px;color:#cbd5e9}footer{border-top:1px solid var(--line);padding:26px 0 50px;color:var(--muted);font:600 12px/1.5 Inter,system-ui,sans-serif}a{color:var(--accent)}
+:root{--paper:#f2efe6;--ink:#11110f;--muted:#6f6b63;--line:#bbb5a9;--orange:#ff4b24;--acid:#dfff3f}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink)}a{color:inherit}.shell{width:min(1180px,calc(100% - 32px));margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--ink);padding:18px 0;font:700 10px/1.2 "Courier New",monospace;letter-spacing:.05em}.top a{text-decoration:none}.top span:last-child{color:var(--orange)}.article-head{display:grid;grid-template-columns:160px 1fr;gap:32px;border-bottom:2px solid var(--ink);padding:48px 0 36px}.meta{font:700 10px/1.55 "Courier New",monospace;color:var(--muted)}.meta strong{display:block;color:var(--orange);margin-bottom:8px}.article-head h1{margin:0;font:900 clamp(52px,8vw,112px)/.86 Arial Black,Arial,sans-serif;letter-spacing:-.07em;text-transform:uppercase;max-width:10ch}.standfirst{grid-column:2;max-width:770px;margin:22px 0 0;font:400 clamp(20px,2.3vw,28px)/1.38 Georgia,"Times New Roman",serif}.article-layout{display:grid;grid-template-columns:160px minmax(0,720px) 1fr;gap:32px;padding:46px 0 100px}.rail{font:700 9px/1.5 "Courier New",monospace;color:var(--muted)}.rail b{color:var(--ink)}.prose{font:400 18px/1.68 Georgia,"Times New Roman",serif}.prose p{margin:0 0 24px}.prose h2{margin:54px 0 18px;font:900 34px/.98 Arial,Helvetica,sans-serif;letter-spacing:-.04em}.prose sup{font:700 10px/1 "Courier New",monospace}.prose sup a{text-decoration:none;color:var(--orange)}.experiment{margin:38px 0 44px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:18px 0 20px}.experiment-head{display:flex;justify-content:space-between;gap:20px;align-items:center;font:700 10px/1.3 "Courier New",monospace}.experiment button{border:0;background:var(--ink);color:var(--paper);padding:11px 13px;font:800 10px/1 Arial,sans-serif;letter-spacing:.04em;cursor:pointer}.experiment button:hover{background:var(--orange);color:#111}.flips{display:flex;flex-wrap:wrap;gap:5px;margin:18px 0 10px;min-height:35px}.flip{width:30px;height:30px;display:grid;place-items:center;border:1px solid var(--ink);font:800 12px/1 "Courier New",monospace}.flip.run{background:var(--acid)}.flip-stats{font:700 10px/1.45 "Courier New",monospace;color:var(--muted)}.aside{align-self:start;border-top:1px solid var(--ink);padding-top:12px;font:400 14px/1.5 Georgia,"Times New Roman",serif;color:var(--muted)}.aside strong{display:block;margin-bottom:8px;font:700 9px/1.3 "Courier New",monospace;color:var(--orange)}.sources{margin-top:58px;padding-top:16px;border-top:1px solid var(--ink);font-size:14px}.sources h2{margin:0 0 12px;font:800 18px/1 Arial,sans-serif}.sources ol{padding-left:20px;margin:0}.sources li{margin:0 0 10px}.sources a{text-underline-offset:3px}.footer{border-top:2px solid var(--ink);padding:18px 0 46px;display:flex;justify-content:space-between;gap:20px;font:700 10px/1.4 "Courier New",monospace;color:var(--muted)}
+@media(max-width:850px){.article-head{grid-template-columns:1fr}.standfirst{grid-column:1}.article-layout{grid-template-columns:1fr}.rail{display:flex;gap:18px}.aside{max-width:560px}.article-head h1{max-width:12ch}}
+@media(max-width:520px){.shell{width:min(100% - 24px,1180px)}.top{font-size:9px}.top span:nth-child(2){display:none}.article-head{padding:34px 0 28px;gap:18px}.article-head h1{font-size:clamp(49px,17vw,76px)}.standfirst{font-size:20px}.article-layout{padding-top:28px;gap:24px}.prose{font-size:17px;line-height:1.65}.prose h2{font-size:29px;margin-top:44px}.experiment-head{align-items:flex-start;flex-direction:column}.experiment button{width:100%;min-height:44px}.flip{width:27px;height:27px}.footer{flex-direction:column}}
 </style>
 </head>
-<body><header class="wrap"><a class="back" href="../index.html">← Daily Game archive</a></header><main class="wrap"><div class="kicker">Daily article · Day 1</div><div class="date">August 22, 2026 · about 5 minutes</div><h1>Why humans are surprisingly bad at inventing randomness</h1><p class="lead">Ask a person to make up a random sequence and they usually try too hard to make it <em>look</em> random. Real randomness has no such concern for our aesthetic standards.</p><div class="chips"><span class="chip">probability</span><span class="chip">psychology</span><span class="chip">patterns</span></div><p>Imagine I ask you to write twenty imaginary coin flips using only H and T. A common answer looks something like H T H H T H T T H T H T T H T H H T H T. It has changes, a few pairs, and no long ugly clumps. It feels convincingly mixed.</p><p>That feeling is the problem.</p><p>A genuinely random coin is perfectly happy to produce H H H H H. Five heads in a row has probability 1 in 32 at any particular starting point. That is uncommon, but not remotely bizarre. In a long sequence, streaks are inevitable. Humans tend to suppress them when inventing randomness because a run of identical outcomes feels suspiciously deliberate.</p><h2>We confuse randomness with alternation</h2><p>When people generate fake coin flips, they often switch between heads and tails too frequently. We carry an intuitive model in which randomness should constantly demonstrate its lack of preference. If heads just appeared twice, surely tails is now somehow more suitable.</p><p>But an independent coin has no memory. After ten heads, the next fair flip is still fifty-fifty. The universe does not keep a tiny fairness accountant beside the coin.</p><div class="callout">Random does not mean “evenly mixed at every scale.” It means that no outcome is being deliberately arranged. Local messiness is part of the deal.</div><h2>Our brains are pattern machines</h2><p>This bias makes sense when you consider what brains are for. Detecting structure is useful. A sound repeating in the grass, a seasonal food source, a familiar face, or a reliable cause-and-effect relationship can matter. Missing a real pattern can be costly, so our perceptual machinery is willing to tolerate false alarms.</p><p>That becomes awkward around random data. We see clusters and feel that something must have caused them. Basketball fans debate “hot hands.” Investors build stories around short market streaks. Players decide a game is rigged because the same unlucky event happened three times. Sometimes there really is a cause. Sometimes probability merely produced a clump and our narrative department arrived before statistics did.</p><h2>The birthday surprise</h2><p>Another place intuition gets mugged by probability is the birthday problem. With 23 people in a room, the chance that at least two share a birthday is already a little over 50%, assuming birthdays are spread roughly evenly through the year.</p><p>People often guess much lower because they unconsciously compare everyone to one particular birthday. The actual question compares every pair of people. Twenty-three people create 253 different pairs. Suddenly there are many opportunities for a match.</p><p>This is a recurring lesson in probability: our intuition tends to focus on one path through a situation while mathematics quietly counts all the paths.</p><h2>Can humans ever be random?</h2><p>We can use physical processes that are difficult to predict, and computers can produce pseudorandom sequences whose statistical behavior is excellent for games and simulations. But a person consciously inventing numbers is usually carrying preferences, habits, favorite digits, avoidance of repetition, and an urge to make the sequence look respectable.</p><p>That does not make human intuition useless. It makes randomness one of those subjects where intuition benefits from calibration. Once you learn that streaks are normal, that clusters happen, and that small samples are lumpy, genuinely random data starts to look less suspicious.</p><p>It also becomes stranger. The most authentic-looking random sequence may be the one you would have rejected for looking fake.</p></main><footer class="wrap">Daily Game · a new playable experiment and a new thing to read every day.</footer></body></html>
+<body>
+<header class="top shell"><a href="../index.html">← DAILY GAME</a><span>DAILY ARTICLE / 001</span><span>22 AUG 2026</span></header>
+<main class="shell">
+  <header class="article-head">
+    <div class="meta"><strong>PROBABILITY / PSYCHOLOGY</strong>About 6 minutes<br>Sources at the end</div>
+    <h1>A fair coin is streakier than you think</h1>
+    <p class="standfirst">People do tend to make fake coin flips alternate too much. The interesting part is what researchers can, and cannot, infer from that.</p>
+  </header>
+
+  <div class="article-layout">
+    <aside class="rail"><span><b>01</b><br>DAY</span><span><b>1,048,576</b><br>POSSIBLE 20-FLIP STRINGS</span></aside>
+    <article class="prose">
+      <p>Take a piece of paper and invent twenty flips of a fair coin. Use H and T. Do it before reading much farther if you want to catch your own first instinct.</p>
+
+      <p>Maya Bar-Hillel and Willem Wagenaar spent part of a 1991 review looking at experiments built around tasks like this: people either judged whether a sequence looked random or tried to produce one themselves. Across the earlier work, one result appeared often enough to be hard to ignore. People tended to switch between the two outcomes more frequently than a fair coin does, and they were reluctant to produce long runs.<sup><a href="#s1">1</a></sup></p>
+
+      <div class="experiment" aria-label="Twenty fair coin flips simulator">
+        <div class="experiment-head"><span>COMPARE YOUR STRING WITH AN ACTUAL 20-FLIP SAMPLE</span><button id="flipBtn">FLIP 20 COINS</button></div>
+        <div id="flips" class="flips" aria-live="polite"></div>
+        <div id="flipStats" class="flip-stats">The longest run and number of switches will appear here.</div>
+      </div>
+
+      <h2>A coin does not try to look balanced</h2>
+
+      <p>Twenty flips contain nineteen boundaries where the result could stay the same or switch. For an independent fair coin, each boundary has a one-half chance of being a switch, so the expected number of switches is 9.5. A person trying to make the string look suitably mixed will often push that number upward.</p>
+
+      <p>Runs are the other half of it. Five heads in a row at one specified position has probability 1/32. But a twenty-flip string has many possible places where a run can start, and the possibilities overlap. If you enumerate all 2<sup>20</sup> = 1,048,576 equally likely strings, 480,670 contain at least one run of five or more identical results. That is about 45.84%.</p>
+
+      <p>So a run like HHHHH can look more suspicious than it should when it sits inside a longer sample. In twenty flips, clumps of that size turn up fairly often.</p>
+
+      <h2>The phrase was “local representativeness”</h2>
+
+      <p>Bar-Hillel and Wagenaar described the bias as <em>local representativeness</em>. In a short stretch, people want both outcomes to show up in roughly the right proportions, while also avoiding obvious-looking patterns. A short sample is expected to carry the character of the whole process.</p>
+
+      <p>This is a strange requirement to impose on a coin. An independent process promises a probability on each flip. It does not promise that every window of six, ten, or twenty flips will contain a tasteful mixture of heads and tails.</p>
+
+      <p>There is a second wrinkle. Perfect alternation, HTHTHTHTHT, also looks wrong to most people even though it is exactly as likely as any other particular ten-flip string. We are not simply maximizing alternation. We seem to be aiming for a narrow visual idea of disorder: enough changes, few long runs, but not an obvious repeating machine.</p>
+
+      <h2>“Humans are bad at randomness” is too broad</h2>
+
+      <p>Raymond Nickerson revisited the literature in a 2002 <em>Psychological Review</em> paper and was careful about a claim that had become much stronger than the evidence. The common statement that people are simply incapable of producing or recognizing randomness, he argued, did not have the experimental support people sometimes gave it. Instructions matter. So does the particular statistic used to grade a sequence.<sup><a href="#s2">2</a></sup></p>
+
+      <p>There is also a basic distinction between a random <em>process</em> and a random-looking <em>product</em>. A fair coin can produce HHHHH. A person following a rigid recipe could produce a sequence that passes several statistical checks. Looking at one short string cannot tell you, by itself, how it was generated.</p>
+
+      <p>Wagenaar had already complained about a related problem in a 1972 survey: experiments used different instructions and different definitions of mathematical randomness, which made the results difficult to compare cleanly.<sup><a href="#s3">3</a></sup> Those differences are one reason Nickerson later urged more caution about broad conclusions.</p>
+
+      <h2>Try the twenty flips again</h2>
+
+      <p>If your first invented sequence had twelve or thirteen switches and no run longer than three, that would fit the old experimental pattern. It would not diagnose some general failure of human reasoning. You were asked to imitate an underspecified idea called “random,” probably without a calculator, while also trying not to look as though you were following a rule.</p>
+
+      <p>After seeing the 45.84% figure, you may deliberately leave uglier streaks in your next fake sequence. At that point the task has changed. You are no longer showing what randomness looked like to you before anyone supplied the statistic.</p>
+
+      <section class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li id="s1">Maya Bar-Hillel and Willem A. Wagenaar, <a href="https://doi.org/10.1016/0196-8858(91)90029-I">“The perception of randomness”</a>, <em>Advances in Applied Mathematics</em> 12(4), 1991, pp. 428–454.</li>
+          <li id="s2">Raymond S. Nickerson, <a href="https://pubmed.ncbi.nlm.nih.gov/11990321/">“The production and perception of randomness”</a>, <em>Psychological Review</em> 109(2), 2002, pp. 330–357.</li>
+          <li id="s3">W. A. Wagenaar, <a href="https://doi.org/10.1037/h0032060">“Generation of random sequences by human subjects: A critical survey of literature”</a>, <em>Psychological Bulletin</em> 77(1), 1972, pp. 65–72.</li>
+        </ol>
+      </section>
+    </article>
+    <aside class="aside"><strong>ABOUT THE 45.84% NUMBER</strong>It is an exact count for twenty independent fair binary outcomes. A “run of five” here means at least five identical outcomes consecutively, anywhere in the string, including longer runs.</aside>
+  </div>
+</main>
+<footer class="footer shell"><span>DAILY GAME / ARTICLE 001</span><span>Next game and article tomorrow.</span></footer>
+<script>
+const btn=document.getElementById('flipBtn'),out=document.getElementById('flips'),stats=document.getElementById('flipStats');
+function bits(n){const a=new Uint8Array(n);if(globalThis.crypto?.getRandomValues)crypto.getRandomValues(a);else for(let i=0;i<n;i++)a[i]=Math.random()*256;return [...a].map(v=>v&1)}
+function run(){const seq=bits(20),runs=[];let start=0,best={start:0,len:1};for(let i=1;i<=seq.length;i++){if(i===seq.length||seq[i]!==seq[start]){const r={start,len:i-start};runs.push(r);if(r.len>best.len)best=r;start=i}}const switches=seq.slice(1).reduce((n,v,i)=>n+(v!==seq[i]),0);out.innerHTML=seq.map((v,i)=>`<span class="flip ${i>=best.start&&i<best.start+best.len?'run':''}">${v?'H':'T'}</span>`).join('');stats.textContent=`${switches} switches · longest run ${best.len} · highlighted run shown in green`;}
+btn.addEventListener('click',run);run();
+</script>
+</body>
+</html>
