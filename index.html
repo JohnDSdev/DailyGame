@@ -3,66 +3,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b1020">
+  <meta name="theme-color" content="#f2efe6">
   <title>Daily Game</title>
+  <meta name="description" content="One new browser game and one new article every day.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <div class="ambient ambient-a" aria-hidden="true"></div>
-  <div class="ambient ambient-b" aria-hidden="true"></div>
-
-  <header class="site-header wrap">
-    <a class="brand" href="./" aria-label="Daily Game home">
-      <span class="brand-mark">DG</span>
-      <span>Daily Game</span>
-    </a>
-    <div class="day-pill" title="Days since Daily Game began">
-      <span class="pulse"></span>
-      <span id="dayCount">Day 1</span>
+  <header class="masthead shell">
+    <div class="masthead-top">
+      <span>EST. 22 AUG 2026</span>
+      <span>ONE NEW GAME / ONE NEW ARTICLE / EVERY DAY</span>
+      <strong id="dayCount">DAY 001</strong>
+    </div>
+    <a class="wordmark" href="./" aria-label="Daily Game home">DAILY GAME</a>
+    <div class="masthead-bottom">
+      <span>PLAY IN YOUR BROWSER</span>
+      <span id="gameCount">1 GAME PUBLISHED</span>
+      <span>WORKS OFFLINE</span>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <p class="eyebrow">ONE NEW GAME. EVERY DAY.</p>
-      <h1>A tiny arcade that gets <span>weirder daily.</span></h1>
-      <p class="hero-copy">Platformers, puzzles, 3D experiments, board games, arcade chaos, and whatever else seems fun enough to deserve a day.</p>
-    </section>
+  <main class="shell">
+    <section class="today" aria-labelledby="today-title">
+      <div class="section-kicker">
+        <span>TODAY'S ISSUE</span>
+        <time id="latestDate"></time>
+      </div>
 
-    <section id="latest" class="latest" aria-labelledby="latest-title">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">TODAY</p>
-          <h2 id="latest-title">Latest game</h2>
+      <div class="today-grid">
+        <div class="today-copy">
+          <p id="latestType" class="game-type">TIME-LOOP PUZZLE</p>
+          <h1 id="today-title">Afterimage</h1>
+          <p id="latestDescription" class="dek"></p>
+          <div class="play-line">
+            <a id="latestGame" class="play-button" href="#">PLAY TODAY'S GAME <span aria-hidden="true">↗</span></a>
+            <span>touch / keyboard · saves locally</span>
+          </div>
         </div>
-        <span id="latestDate" class="muted"></span>
-      </div>
-      <div id="latestCard"></div>
-    </section>
 
-    <section class="article-strip" aria-labelledby="article-title">
-      <div>
-        <p class="eyebrow">DAILY ARTICLE</p>
-        <h2 id="article-title">Something interesting between rounds.</h2>
+        <a id="latestPoster" class="poster" href="#" aria-label="Play today's game">
+          <img id="latestPreview" src="" alt="">
+        </a>
       </div>
-      <a id="latestArticle" class="text-link" href="#">Read today’s article <span>→</span></a>
+
+      <div class="article-feature">
+        <span class="article-label">TODAY'S READING</span>
+        <a id="latestArticle" href="#">
+          <strong id="latestArticleTitle"></strong>
+          <span id="latestArticleDescription"></span>
+        </a>
+        <span class="article-arrow" aria-hidden="true">→</span>
+      </div>
     </section>
 
     <section class="archive" aria-labelledby="archive-title">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">THE ARCHIVE</p>
-          <h2 id="archive-title">Every game so far</h2>
-        </div>
-        <span id="gameCount" class="muted"></span>
+      <div class="archive-heading">
+        <h2 id="archive-title">Archive</h2>
+        <p>Every game stays playable. Every article stays readable.</p>
       </div>
-      <div id="gameGrid" class="game-grid"></div>
+      <div class="archive-labels" aria-hidden="true">
+        <span>DAY / DATE</span><span>GAME</span><span>TYPE</span><span>READ</span><span></span>
+      </div>
+      <div id="archiveRows" class="archive-rows"></div>
     </section>
   </main>
 
-  <footer class="wrap footer">
-    <span>Daily Game</span>
-    <span>Built to work offline. No launcher, account, or ritual sacrifice required.</span>
+  <footer class="footer shell">
+    <strong>DAILY GAME</strong>
+    <span>No account. No build step. Download the repo and open index.html.</span>
+    <span>2026—</span>
   </footer>
 
   <script src="data/days.js"></script>
