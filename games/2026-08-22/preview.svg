@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="t d">
+<title id="t">Afterimage game preview</title><desc id="d">Abstract time-loop puzzle board with a bright player, echoes, doors and pressure plates.</desc>
+<rect width="1200" height="900" fill="#11110f"/>
+<rect x="48" y="48" width="1104" height="804" fill="none" stroke="#f2efe6" stroke-width="2"/>
+<text x="82" y="112" fill="#ff4b24" font-family="monospace" font-size="24" font-weight="700">DAILY GAME / 001 / TIME-LOOP PUZZLE</text>
+<text x="80" y="252" fill="#f2efe6" font-family="Arial Black,Arial,sans-serif" font-size="122" font-weight="900" letter-spacing="-9">AFTERIMAGE</text>
+<g transform="translate(82 330)">
+  <g fill="#171715" stroke="#393833" stroke-width="2">
+    <path d="M0 0H840V360H0Z"/>
+    <path d="M0 0V360M60 0V360M120 0V360M180 0V360M240 0V360M300 0V360M360 0V360M420 0V360M480 0V360M540 0V360M600 0V360M660 0V360M720 0V360M780 0V360M840 0V360" fill="none"/>
+    <path d="M0 0H840M0 60H840M0 120H840M0 180H840M0 240H840M0 300H840M0 360H840" fill="none"/>
+  </g>
+  <g fill="#090909">
+    <rect x="0" y="0" width="60" height="360"/><rect x="0" y="0" width="840" height="60"/><rect x="0" y="300" width="840" height="60"/>
+    <rect x="240" y="60" width="60" height="120"/><rect x="540" y="180" width="60" height="120"/>
+  </g>
+  <circle cx="180" cy="210" r="17" fill="none" stroke="#ff4b24" stroke-width="7"/><text x="180" y="218" fill="#ff4b24" text-anchor="middle" font-family="monospace" font-size="20" font-weight="700">a</text>
+  <g stroke="#f2efe6" stroke-width="7"><path d="M420 142V218M440 142V218M460 142V218"/></g><text x="440" y="188" fill="#f2efe6" text-anchor="middle" font-family="monospace" font-size="18">A</text>
+  <g fill="none" stroke="#a88cff" stroke-width="6"><circle cx="660" cy="90" r="21"/><circle cx="660" cy="90" r="8"/></g><text x="660" y="97" fill="#a88cff" text-anchor="middle" font-family="monospace" font-size="16">1</text>
+  <g transform="translate(740 180) rotate(45)"><rect x="-17" y="-17" width="34" height="34" fill="none" stroke="#dfff3f" stroke-width="7"/></g>
+  <path d="M90 180H180V120H300V180H420" fill="none" stroke="#5bd7ff" stroke-width="7" opacity=".55"/>
+  <rect x="77" y="167" width="26" height="26" fill="#dfff3f"/><rect x="167" y="197" width="26" height="26" fill="#5bd7ff" fill-opacity=".22" stroke="#5bd7ff" stroke-width="5"/>
+</g>
+<text x="962" y="518" fill="#dfff3f" font-family="monospace" font-size="22" font-weight="700">RECORD</text>
+<text x="962" y="550" fill="#f2efe6" font-family="monospace" font-size="22">REPLAY</text>
+<text x="962" y="582" fill="#f2efe6" font-family="monospace" font-size="22">ESCAPE</text>
+<text x="82" y="807" fill="#8d8a82" font-family="monospace" font-size="20">TOUCH / KEYBOARD · 10 HAND-BUILT LEVELS · SAVES LOCALLY</text>
+</svg>
