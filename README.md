@@ -1,44 +1,50 @@
 # Daily Game
 
-A static archive with one new high-effort browser game and one original article every day.
+One new browser game and one researched article every day. The whole archive is static: download the repository, unzip it, open `index.html`, and it should still work.
 
 ## Run it anywhere
 
-Download the repository as a ZIP, extract it, and open `index.html` directly in a browser. The site intentionally avoids a build step, backend, package manager, and homepage `fetch()` calls so it can work from `file://` as well as GitHub Pages.
+There is no build step, package manager, backend, or homepage `fetch()` call. Relative paths are intentional so the same files work from `file://` and from GitHub Pages.
 
 ## Structure
 
 ```text
 DailyGame/
-├─ index.html                 # homepage and archive
+├─ index.html
 ├─ assets/
-│  ├─ site.css                # homepage styling
-│  └─ site.js                 # archive rendering
+│  ├─ site.css
+│  ├─ site.js
+│  └─ favicon.svg
 ├─ data/
-│  └─ days.js                 # ordered metadata for every daily entry
+│  └─ days.js
 ├─ games/
 │  └─ YYYY-MM-DD/
-│     └─ index.html           # that day's self-contained game
+│     ├─ index.html
+│     └─ preview.svg
 ├─ articles/
-│  └─ YYYY-MM-DD.html         # that day's article
+│  └─ YYYY-MM-DD.html
+├─ guides/
+│  └─ QUALITY.md
 └─ .github/workflows/
-   └─ pages.yml               # GitHub Pages deployment
+   └─ pages.yml
 ```
+
+## Before making a daily entry
+
+Read `guides/QUALITY.md`. It defines the game, writing, mobile, and visual quality bar. In particular, the article workflow requires reading the linked Unslop skill, blacklist, and prose benchmarks before drafting.
 
 ## Daily publishing contract
 
-Every calendar day should add exactly one game and one article.
-
-1. Create `games/YYYY-MM-DD/index.html`.
-2. Make the game genuinely substantial and distinct. Rotate genres and mechanics instead of reskinning yesterday's idea. Games may be 2D, 3D, puzzle, arcade, board, strategy, platformer, maze, simulation, experimental, etc.
-3. The game must work without a backend and should avoid remote dependencies when practical so the downloaded archive remains playable offline.
-4. Support keyboard/mouse and touch when the mechanic reasonably allows it. Include instructions, restart/replay behavior, responsive layout, and polish such as audio-free visual feedback, animation, particles, progression, scoring, levels, procedural generation, or other systems appropriate to the game.
-5. Create `articles/YYYY-MM-DD.html` with an original, interesting article on any worthwhile subject. It should be more than filler and should be pleasant to read on desktop and mobile.
-6. Add the day's metadata to `data/days.js` with `date`, `title`, `type`, `description`, `symbol`, `gradient`, `game`, `article`, and `articleTitle`.
-7. Keep newest entries first in `DAILY_ENTRIES`.
-8. Do not change `DAILY_GAME_START`; it is the site's birthday and drives the day counter.
-9. Check all relative links from the homepage, game, and article. Everything must continue to work when `index.html` is opened directly from an extracted ZIP.
-10. Commit the complete daily entry to `main`. The Pages workflow deploys pushes automatically.
+1. Create `games/YYYY-MM-DD/index.html` and `games/YYYY-MM-DD/preview.svg`.
+2. The game must be meaningfully different from recent entries. Rotate genres, interaction models, art direction, and pacing rather than reskinning yesterday's code.
+3. Treat mobile as a primary platform. Use touch controls that fit the mechanic instead of miniature desktop controls. Also support keyboard/mouse when useful.
+4. Keep the game self-contained and offline-friendly. Remote dependencies should be exceptional because an extracted ZIP must remain playable.
+5. Add enough craft to justify the daily slot: level design or procedural depth, feedback, saved state, replayability, animation/audio where appropriate, good instructions, and clean restart/win/loss behavior.
+6. Research and write `articles/YYYY-MM-DD.html`. Read the Unslop material linked in `guides/QUALITY.md` first. Use real sources, link them, and keep unsupported specifics out.
+7. Add the entry to `data/days.js` with `date`, `title`, `type`, `description`, `accent`, `preview`, `game`, `article`, `articleTitle`, and `articleDescription`.
+8. Keep `DAILY_ENTRIES` newest-first. Never change `DAILY_GAME_START`.
+9. Check all relative links and avoid APIs that fail solely because the site was opened with `file://`.
+10. Commit the complete entry to `main`; the Pages workflow deploys it.
 
 ## Site birthday
 
