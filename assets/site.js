@@ -5,17 +5,14 @@
   const $ = (s) => document.querySelector(s);
   const esc = (v) => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
   const parseDate = (s) => { const [y,m,d] = s.split("-").map(Number); return new Date(y,m-1,d); };
-  const dayFor = (date) => Math.floor((Date.UTC(...date.split("-").map(Number).map((n,i)=>i===1?n-1:n)) - Date.UTC(...start.split("-").map(Number).map((n,i)=>i===1?n-1:n))) / 86400000) + 1;
   const todayNumber = () => {
     const now = new Date();
     const [sy,sm,sd] = start.split("-").map(Number);
     return Math.max(1, Math.floor((Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()) - Date.UTC(sy,sm-1,sd))/86400000)+1);
   };
   const longDate = (s) => new Intl.DateTimeFormat(undefined,{weekday:"long",month:"long",day:"numeric",year:"numeric"}).format(parseDate(s));
-  const shortDate = (s) => new Intl.DateTimeFormat(undefined,{month:"short",day:"2-digit",year:"numeric"}).format(parseDate(s)).toUpperCase();
 
   $("#dayCount").textContent = `DAY ${String(todayNumber()).padStart(3,"0")}`;
-  $("#gameCount").textContent = `${entries.length} GAME${entries.length===1?"":"S"} PUBLISHED`;
 
   if (!entries.length) {
     $("#today-title").textContent = "No game yet";
@@ -39,7 +36,6 @@
 
   $("#archiveRows").innerHTML = entries.map(entry => `
     <article class="archive-row" style="--row-accent:${esc(entry.accent || "#ff4b24")}">
-      <div class="archive-date"><strong>DAY ${String(dayFor(entry.date)).padStart(3,"0")}</strong><span>${esc(shortDate(entry.date))}</span></div>
       <a class="archive-game" href="${esc(entry.game)}"><img class="archive-thumb" src="${esc(entry.preview)}" alt="" loading="lazy"><strong>${esc(entry.title)}</strong></a>
       <span class="archive-type">${esc(entry.type)}</span>
       <a class="archive-article" href="${esc(entry.article)}">${esc(entry.articleTitle)}</a>
