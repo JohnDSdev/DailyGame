@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="#07131c"/>
+<g transform="translate(670 450)" fill="none" stroke="#35505d" stroke-width="3">
+  <circle r="150"/><circle r="235"/><circle r="325"/>
+</g>
+<g transform="translate(670 450)" fill="none">
+  <path d="M-89-121 A150 150 0 0 1 42-144" stroke="#ff6f61" stroke-width="24"/>
+  <path d="M-283 158 A325 325 0 0 1 -320-55" stroke="#ff6f61" stroke-width="24"/>
+</g>
+<g stroke="#ffc44f" stroke-width="8" fill="none">
+  <path d="M820 260 l-16 38 M844 270 l-16 38"/>
+  <path d="M446 584 l-20 34 M468 596 l-20 34"/>
+</g>
+<g transform="translate(875 540) rotate(120)">
+  <path d="M0-25 19 19 0 10-19 19Z" fill="#eef2e8"/>
+  <path d="M-18 30H18" stroke="#ffc44f" stroke-width="5"/>
+</g>
+<g stroke="#65d7d2" stroke-width="7">
+  <path d="M620 193h34M637 176v34"/>
+  <circle cx="637" cy="193" r="24" fill="none" opacity=".55"/>
+  <path d="M438 382h34M455 365v34"/>
+  <circle cx="455" cy="382" r="24" fill="none" opacity=".55"/>
+</g>
+<text x="62" y="96" fill="#ffc44f" font-family="monospace" font-size="25" font-weight="700" letter-spacing="3">DAILY GAME / 003 / ORBITAL TIMING</text>
+<text x="58" y="210" fill="#eef2e8" font-family="Arial Black,Arial,sans-serif" font-size="118" font-weight="900" letter-spacing="-8">TRANSFER</text>
+<text x="58" y="314" fill="#eef2e8" font-family="Arial Black,Arial,sans-serif" font-size="118" font-weight="900" letter-spacing="-8">WINDOW</text>
+<text x="64" y="785" fill="#9bb0b5" font-family="monospace" font-size="23" letter-spacing="2">TAP THE GATE · CHANGE ORBIT · COLLECT EVERY SIGNAL</text>
+</svg>
