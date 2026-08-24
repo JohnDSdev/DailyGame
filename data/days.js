@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-08-24",
+    title: "Transfer Window",
+    type: "Orbital timing",
+    description: "Your probe cannot brake or steer. Tap only as it crosses transfer gates to jump between concentric orbits, collect signals and dodge radiation arcs across eight hand-built missions.",
+    accent: "#ffc44f",
+    preview: "games/2026-08-24/preview.svg",
+    game: "games/2026-08-24/index.html",
+    article: "articles/2026-08-24.html",
+    articleTitle: "The Moon still answers lasers from Apollo 11",
+    articleDescription: "Apollo-era reflector arrays are still used for lunar laser ranging. The useful return can be only a few photons, timed across a roughly 2.56-second round trip."
+  },
+  {
     date: "2026-08-23",
     title: "Night Ferry",
     type: "One-finger stealth",
