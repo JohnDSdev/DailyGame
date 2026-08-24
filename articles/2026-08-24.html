@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f1eee4">
+<title>The Moon still answers lasers from Apollo 11 — Daily Game</title>
+<style>
+:root{--paper:#f1eee4;--ink:#171815;--muted:#6c6a63;--line:#b7b1a3;--red:#c94735;--blue:#356f7c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+.shell{width:min(760px,calc(100% - 34px));margin:auto}
+.top{border-bottom:1px solid var(--ink);padding:16px 0;font:700 11px/1.3 "Courier New",monospace;letter-spacing:.06em;text-transform:uppercase;display:flex;justify-content:space-between;gap:20px}
+.top a{text-decoration:none}
+header{padding:58px 0 38px;border-bottom:1px solid var(--ink)}
+.kicker{margin:0 0 14px;color:var(--red);font:700 12px/1.3 "Courier New",monospace;letter-spacing:.08em;text-transform:uppercase}
+h1{margin:0;font:900 clamp(52px,10vw,100px)/.84 Arial Black,Arial,sans-serif;letter-spacing:-.065em;text-transform:uppercase}
+.dek{margin:28px 0 0;max-width:680px;font-size:21px;line-height:1.42}
+.meta{margin-top:22px;color:var(--muted);font:700 10px/1.4 "Courier New",monospace;letter-spacing:.06em;text-transform:uppercase}
+article{padding:42px 0 90px}
+article p{font-size:18px;line-height:1.62;margin:0 0 23px}
+article h2{margin:54px 0 18px;font:900 33px/.95 Arial,Helvetica,sans-serif;letter-spacing:-.04em}
+.figure{margin:38px 0 42px;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding:16px 0 18px}
+.figure h3{margin:0 0 8px;font:800 18px/1.1 Arial,Helvetica,sans-serif}
+.figure p{font:14px/1.45 "Courier New",monospace;color:var(--muted);margin:0 0 15px}
+.range{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:end;margin-bottom:16px}
+.range strong{font:900 clamp(34px,8vw,60px)/1 Arial Black,Arial,sans-serif;letter-spacing:-.04em}
+.range span{font:700 11px/1.4 "Courier New",monospace;color:var(--muted);text-align:right}
+input[type=range]{width:100%;accent-color:var(--red)}
+.trip{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink)}
+.trip div{padding:16px}
+.trip div+div{border-left:1px solid var(--ink)}
+.trip small{display:block;color:var(--muted);font:700 9px/1.2 "Courier New",monospace;letter-spacing:.08em;text-transform:uppercase}
+.trip b{display:block;margin-top:4px;font:900 28px/1 Arial,Helvetica,sans-serif}
+.diagram{margin:36px 0;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.line{display:grid;grid-template-columns:72px 1fr 72px;gap:12px;align-items:center}
+.body{width:58px;height:58px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font:700 9px/1 "Courier New",monospace;text-transform:uppercase}
+.body.moon{width:42px;height:42px;justify-self:end}
+.beam{position:relative;height:18px;border-top:2px solid var(--red);border-bottom:2px solid var(--blue)}
+.beam:before,.beam:after{content:"";position:absolute;top:50%;width:8px;height:8px;border-top:2px solid;transform:translateY(-50%) rotate(45deg)}
+.beam:before{left:2px;border-left:2px solid var(--blue);border-color:var(--blue)}
+.beam:after{right:2px;border-top:2px solid var(--red);border-right:2px solid var(--red)}
+.caption{margin-top:11px!important;font:12px/1.45 "Courier New",monospace!important;color:var(--muted)}
+.note{border-left:4px solid var(--blue);padding:2px 0 2px 18px;margin:32px 0}
+.note p{margin:0;font-size:16px}
+.sources{margin-top:58px;border-top:2px solid var(--ink);padding-top:18px}
+.sources h2{margin:0 0 14px;font-size:25px}
+.sources ol{padding-left:22px;margin:0}
+.sources li{margin:0 0 12px;font-size:14px;line-height:1.45}
+@media(max-width:520px){
+  header{padding-top:42px}.dek{font-size:19px}article p{font-size:17px}
+  .trip{grid-template-columns:1fr}.trip div+div{border-left:0;border-top:1px solid var(--ink)}
+  .line{grid-template-columns:54px 1fr 54px}.body{width:48px;height:48px}.body.moon{width:36px;height:36px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="top"><a href="../index.html">← Daily Game</a><span>August 24, 2026</span></div>
+  <header>
+    <p class="kicker">Lunar laser ranging</p>
+    <h1>The Moon still answers lasers from Apollo 11</h1>
+    <p class="dek">Three Apollo crews left passive reflector arrays on the lunar surface. More than half a century later, observatories still time the few photons that make the round trip.</p>
+    <div class="meta">Reading time: about 6 minutes</div>
+  </header>
+
+  <article>
+    <p>The hardware at Tranquility Base has no battery to die. Apollo 11 astronauts placed an array of corner-cube reflectors on the Moon in July 1969. Apollo 14 and Apollo 15 later left larger arrays, and Soviet Lunokhod rovers carried reflectors too. A corner cube sends incoming light back toward its source over a useful range of angles, so an observatory on Earth can fire a short laser pulse at one of these arrays and look for the return.</p>
+
+    <p>The return is not a bright flash. NASA's current open-data description says the signal collected by the telescope is typically only a few photons. The useful measurement is the elapsed time. Light makes the trip to the Moon and back; the timing becomes a distance after the observatory accounts for the atmosphere, station position, reflector position and the rest of the geometry.</p>
+
+    <div class="diagram" aria-label="Diagram of laser pulse traveling from Earth to a lunar reflector and back">
+      <div class="line">
+        <div class="body">Earth</div>
+        <div class="beam"></div>
+        <div class="body moon">Moon</div>
+      </div>
+      <p class="caption">Red: outgoing pulse. Blue: returned light. The drawing is intentionally not to scale; if the Earth were this large, the real gap would be inconveniently wide for a phone screen.</p>
+    </div>
+
+    <h2>About two and a half seconds of waiting</h2>
+
+    <p>NASA gives the Moon's average orbital distance as 384,400 kilometers. Using the defined speed of light, 299,792.458 kilometers per second, a simple vacuum round trip at that distance is about 2.56 seconds. Real lunar laser ranging is more exact than this little calculation because the station and reflector are not sitting at the centers of Earth and Moon, and both bodies are moving while the pulse is in flight.</p>
+
+    <div class="figure">
+      <h3>Move the Moon</h3>
+      <p>Set an Earth-Moon distance and see the idealized light time. This is 2 × distance ÷ c, with no atmospheric or geometric corrections.</p>
+      <div class="range"><strong id="km">384,400 km</strong><span id="where">NASA average orbital distance</span></div>
+      <input id="distance" type="range" min="356500" max="406700" step="100" value="384400" aria-label="Earth-Moon distance in kilometers">
+      <div class="trip">
+        <div><small>one way</small><b id="oneway">1.282 s</b></div>
+        <div><small>round trip</small><b id="roundtrip">2.565 s</b></div>
+      </div>
+    </div>
+
+    <p>A few nanoseconds of timing error correspond to roughly a meter of light travel, so better timing, better models and better reflector geometry buy real scientific leverage. The International Laser Ranging Service says lunar ranging data are used to study the Moon's orbit and rotation, its internal structure, Earth-Moon dynamics and tests of gravitational physics.</p>
+
+    <h2>This is still an operating experiment</h2>
+
+    <p>"Apollo experiment" can sound like something that stopped when the astronauts came home. Lunar laser ranging did not. NASA Goddard lists the project as operational. The International Laser Ranging Service's July 2026 report card records lunar returns during the preceding 12 months from Apache Point in New Mexico, Grasse in France, Matera in Italy and Wettzell in Germany. The report includes measurements to the Apollo 11, 14 and 15 arrays and the two Soviet rover reflectors.</p>
+
+    <p>The old targets also have limitations. A 2024 NASA technical report notes that the Apollo-era arrays are still useful but show degradation, and their physical size and tilt now contribute measurement error as researchers push for higher precision. Modern lunar missions have started carrying smaller laser retroreflector arrays. In work spanning February 2023 through December 2024, NASA researchers even ranged from the Lunar Reconnaissance Orbiter to reflectors on the surface, including the Apollo 11 and Apollo 14 arrays and newer targets carried by Chandrayaan-3 and Chang'e 6.</p>
+
+    <div class="note"><p>The Apollo arrays are passive. They do not prove that some forgotten instrument package is still powered on. Their trick is much simpler: geometry, glass and an observatory willing to aim very carefully.</p></div>
+
+    <p>There is a pleasing mismatch in scale here. The object on the Moon is basically an array of optical prisms. The measurement that comes back has fed decades of work on lunar motion and gravity. In July 1969, the first array was another item on an astronaut checklist. In the ILRS tables for 2026, Apollo 11 still has its own column.</p>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ol>
+        <li><a href="https://science.gsfc.nasa.gov/solarsystem/planetarysystems/projects/605/">NASA Goddard Space Flight Center, Lunar Laser Ranging</a>. Project status and Apollo/Lunokhod reflector history.</li>
+        <li><a href="https://data.nasa.gov/dataset/lunar-laser-ranging-llr-data-from-nasa-cddis">NASA Open Data Portal, Lunar Laser Ranging data from CDDIS</a>. Description of the laser pulse, corner-cube targets and few-photon returns.</li>
+        <li><a href="https://ilrs.gsfc.nasa.gov/technology/">International Laser Ranging Service, Technology and Engineering Activities</a>. What lunar laser ranging measures and what the data are used for.</li>
+        <li><a href="https://ilrs.gsfc.nasa.gov/network/system_performance/global_report_cards/monthly/2026/07/2026_07_Monthly_report_card.html">ILRS July 2026 monthly report card</a>. Recent station activity and reflector returns.</li>
+        <li><a href="https://science.nasa.gov/moon/by-the-numbers/">NASA Science, Earth and Moon by the numbers</a>. Average lunar orbital distance of 384,400 km.</li>
+        <li><a href="https://ntrs.nasa.gov/citations/20240015373">NASA Technical Reports Server, “Lunar Laser Ranging in the Artemis Era”</a>. Apollo-array longevity, degradation and precision limits.</li>
+        <li><a href="https://pgda.gsfc.nasa.gov/products/100">NASA GSFC Planetary Geodesy Data Archive, spacecraft-based lunar laser ranging</a>. LRO ranging to Apollo and newer surface reflectors in 2023–2024.</li>
+      </ol>
+    </section>
+  </article>
+</div>
+<script>
+(() => {
+  const c = 299792.458;
+  const slider = document.getElementById("distance");
+  const km = document.getElementById("km");
+  const one = document.getElementById("oneway");
+  const round = document.getElementById("roundtrip");
+  const where = document.getElementById("where");
+  const update = () => {
+    const d = Number(slider.value);
+    km.textContent = d.toLocaleString() + " km";
+    one.textContent = (d / c).toFixed(3) + " s";
+    round.textContent = (2 * d / c).toFixed(3) + " s";
+    where.textContent = Math.abs(d - 384400) < 150 ? "NASA average orbital distance" : (d < 384400 ? "closer than average" : "farther than average");
+  };
+  slider.addEventListener("input", update);
+  update();
+})();
+</script>
+</body>
+</html>
