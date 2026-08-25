@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-08-25",
+    title: "Crease",
+    type: "Reflection puzzle",
+    description: "Swipe along printed crease lines to reflect an entire ink pattern across the page. Match every registration ring within a strict fold allowance while later sheets add decoys and no-print zones.",
+    accent: "#d84b32",
+    preview: "games/2026-08-25/preview.svg",
+    game: "games/2026-08-25/index.html",
+    article: "articles/2026-08-25.html",
+    articleTitle: "The metre was supposed to fit the Earth",
+    articleDescription: "The metre began as one ten-millionth of a meridian quadrant, then moved from a platinum bar to krypton light and finally to an exact value for the speed of light."
+  },
+  {
     date: "2026-08-24",
     title: "Transfer Window",
     type: "Orbital timing",
