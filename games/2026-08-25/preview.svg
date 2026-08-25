@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720">
+<rect width="960" height="720" fill="#17372d"/>
+<g opacity=".13" stroke="#d9dfc8"><path d="M0 90h960M0 180h960M0 270h960M0 360h960M0 450h960M0 540h960M0 630h960"/><path d="M120 0v720M240 0v720M360 0v720M480 0v720M600 0v720M720 0v720M840 0v720"/></g>
+<rect x="92" y="92" width="776" height="500" fill="#0b2119" opacity=".45" transform="translate(14 14)"/>
+<rect x="92" y="92" width="776" height="500" fill="#f3ead3" stroke="#191d18" stroke-width="4"/>
+<g stroke="#ded2b5" stroke-width="2" opacity=".8"><path d="M170 92v500M248 92v500M326 92v500M404 92v500M482 92v500M560 92v500M638 92v500M716 92v500M794 92v500"/><path d="M92 142h776M92 192h776M92 242h776M92 292h776M92 342h776M92 392h776M92 442h776M92 492h776M92 542h776"/></g>
+<path d="M255 142L700 542" stroke="#8d836d" stroke-width="5" stroke-dasharray="18 16"/>
+<path d="M479 120v450" stroke="#8d836d" stroke-width="5" stroke-dasharray="18 16"/>
+<g fill="none" stroke="#2e6170" stroke-width="9"><circle cx="650" cy="245" r="24"/><circle cx="700" cy="420" r="24"/><circle cx="555" cy="500" r="24"/></g>
+<g fill="#d84b32"><circle cx="315" cy="448" r="20"/><circle cx="270" cy="270" r="20"/><circle cx="405" cy="190" r="20"/></g>
+<g fill="#d84b32" opacity=".12" stroke="#d84b32" stroke-width="5"><circle cx="180" cy="190" r="52"/></g>
+<text x="134" y="638" fill="#f3ead3" font-family="Arial Black,Arial,sans-serif" font-size="72" font-weight="900" letter-spacing="-5">CREASE</text>
+<text x="818" y="640" text-anchor="end" fill="#d9dfc8" font-family="Courier New,monospace" font-size="22">FOLD THE INK</text>
+</svg>
