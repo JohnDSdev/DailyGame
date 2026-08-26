@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-08-26",
+    title: "Load Line",
+    type: "Balance arcade",
+    description: "Crates land at fixed positions with different weights. You cannot move the freight; drag only the support under the beam and keep its changing center of mass balanced through eight increasingly tight shifts.",
+    accent: "#f05a28",
+    preview: "games/2026-08-26/preview.svg",
+    game: "games/2026-08-26/index.html",
+    article: "articles/2026-08-26.html",
+    articleTitle: "A falling cat can turn without gaining angular momentum",
+    articleDescription: "The falling-cat problem looks like a challenge to angular-momentum conservation until you stop treating the cat as a rigid body. Marey's photographs and later mechanical models show where the missing freedom comes from."
+  },
+  {
     date: "2026-08-25",
     title: "Crease",
     type: "Reflection puzzle",
