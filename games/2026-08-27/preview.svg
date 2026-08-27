@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="#11130f"/>
+<rect x="58" y="58" width="1084" height="784" fill="none" stroke="#30342d" stroke-width="3"/>
+<text x="90" y="124" fill="#ff6b35" font-family="monospace" font-size="26" font-weight="700">DAILY GAME / 006 / PULSE PHYSICS</text>
+<text x="86" y="255" fill="#f3efdc" font-family="Arial Black,Arial" font-size="118" font-weight="900" letter-spacing="-7">RIPPLE ROOM</text>
+<circle cx="337" cy="528" r="52" fill="none" stroke="#f3efdc" stroke-opacity=".18" stroke-width="4"/>
+<circle cx="337" cy="528" r="126" fill="none" stroke="#f3efdc" stroke-opacity=".28" stroke-width="4"/>
+<circle cx="337" cy="528" r="206" fill="none" stroke="#d7ff43" stroke-opacity=".26" stroke-width="4"/>
+<circle cx="337" cy="528" r="286" fill="none" stroke="#f3efdc" stroke-opacity=".12" stroke-width="4"/>
+<circle cx="579" cy="528" r="28" fill="#f3efdc"/>
+<line x1="564" y1="528" x2="594" y2="528" stroke="#11130f" stroke-width="3"/><line x1="579" y1="513" x2="579" y2="543" stroke="#11130f" stroke-width="3"/>
+<rect x="722" y="386" width="54" height="278" fill="#2a2e26" stroke="#596050" stroke-width="3"/>
+<circle cx="951" cy="528" r="74" fill="none" stroke="#d7ff43" stroke-width="7"/><circle cx="951" cy="528" r="34" fill="none" stroke="#d7ff43" stroke-opacity=".4" stroke-width="3"/>
+<text x="90" y="790" fill="#767a6c" font-family="monospace" font-size="22">TAP EMPTY SPACE · RINGS PUSH THE PUCK · 10 HAND-BUILT ROOMS</text>
+</svg>
