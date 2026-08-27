@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-08-27",
+    title: "Ripple Room",
+    type: "Pulse physics",
+    description: "Tap empty space to launch expanding pressure rings. When a ring reaches the puck it kicks it directly away from the tap, so every move is made indirectly through timing, rebounds and careful positioning across ten rooms.",
+    accent: "#d7ff43",
+    preview: "games/2026-08-27/preview.svg",
+    game: "games/2026-08-27/index.html",
+    article: "articles/2026-08-27.html",
+    articleTitle: "The night sky makes its own light",
+    articleDescription: "Airglow is faint light produced by Earth's upper atmosphere itself. Atomic oxygen, sodium and other species leave visible spectral lines, including the familiar 557.7 nm green band seen from orbit."
+  },
+  {
     date: "2026-08-26",
     title: "Load Line",
     type: "Balance arcade",
