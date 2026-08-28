@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="t d">
+<title id="t">High Water preview</title><desc id="d">A survey-map grid with blue flood water, dark ridges, orange sandbags, and red houses.</desc>
+<rect width="1200" height="900" fill="#d7cfb5"/>
+<path d="M0 90H1200M0 180H1200M0 270H1200M0 360H1200M0 450H1200M0 540H1200M0 630H1200M0 720H1200M0 810H1200M100 0V900M200 0V900M300 0V900M400 0V900M500 0V900M600 0V900M700 0V900M800 0V900M900 0V900M1000 0V900M1100 0V900" stroke="#6f6a59" stroke-opacity=".22" stroke-width="2"/>
+<path d="M0 225H360V315H500V405H360V495H560V585H410V675H0Z" fill="#5f9fb3"/>
+<path d="M0 225H360V315H500V405H360V495H560V585H410V675H0" fill="none" stroke="#2b6f87" stroke-width="10"/>
+<path d="M585 0H675V270H585ZM585 450H675V900H585Z" fill="#383a32"/>
+<path d="M585 0l90 90M585 90l90 90M585 180l90 90M585 450l90 90M585 540l90 90M585 630l90 90M585 720l90 90M585 810l90 90" stroke="#827b64" stroke-width="8"/>
+<g fill="#d76f37" stroke="#7d3c24" stroke-width="8"><rect x="588" y="298" width="84" height="54"/><rect x="588" y="388" width="84" height="54"/></g>
+<g fill="#b63f33"><path d="M860 250l70-55 70 55v95H860z"/><rect x="875" y="248" width="110" height="90"/><path d="M910 620l65-50 65 50v90H910z"/><rect x="924" y="618" width="102" height="84"/></g>
+<text x="70" y="92" font-family="Courier New,monospace" font-size="28" font-weight="700" letter-spacing="8" fill="#1c211f">FLOOD CONTROL SURVEY / MAP 07</text>
+<text x="65" y="835" font-family="Arial Black,Arial,sans-serif" font-size="120" font-weight="900" letter-spacing="-8" fill="#1c211f">HIGH WATER</text>
+<text x="952" y="96" font-family="Courier New,monospace" font-size="25" font-weight="700" fill="#9f3f25">1 BAG</text>
+</svg>

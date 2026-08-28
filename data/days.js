@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-08-28",
+    title: "High Water",
+    type: "Flood-routing strategy",
+    description: "Drag a limited line of sandbags across a survey grid, then release the river and watch it flood cell by cell. Protect every house by finding the smallest cut through eight hand-built maps.",
+    accent: "#2b6f87",
+    preview: "games/2026-08-28/preview.svg",
+    game: "games/2026-08-28/index.html",
+    article: "articles/2026-08-28.html",
+    articleTitle: "Rain can launch soil into the air",
+    articleDescription: "High-speed imaging shows that raindrops hitting porous soil can trap bubbles and burst microscopic droplets upward, carrying material from the ground into the air."
+  },
+  {
     date: "2026-08-27",
     title: "Ripple Room",
     type: "Pulse physics",
