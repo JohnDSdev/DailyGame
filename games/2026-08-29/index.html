@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#241716">
+<title>Long Shadow | Daily Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a href="../../index.html">← archive</a>
+  <strong>LONG SHADOW</strong>
+  <div class="head-actions"><button id="sound">sound on</button><button id="rooms">rooms</button></div>
+</header>
+<main id="stage">
+  <canvas id="game" aria-label="Long Shadow light geometry puzzle"></canvas>
+  <div class="hud"><span>ROOM <b id="roomNo">01</b></span><span id="roomName">FIRST MARK</span><span>SWEEPS <b id="sweeps">0</b> · BEST <b id="best">—</b></span></div>
+  <div class="instruction" id="instruction">drag the lamp along the brass rail until every shadow tip sits inside its matching floor mark.</div>
+  <div class="lock" id="lock"><span></span></div>
+</main>
+<footer>
+  <div><b>one finger:</b> drag anywhere across the stage. hold a clean alignment for half a second.</div>
+  <div class="foot-actions"><button id="reset">reset</button></div>
+</footer>
+<section id="intro" class="overlay">
+  <div class="poster-kicker">Daily Game 008 / light geometry</div>
+  <h1>LONG<br>SHADOW</h1>
+  <p>A lamp hangs over a row of cut-paper figures. Move the lamp and their shadows slide across the stage floor. Each shadow has one numbered brass mark. Line every tip up at once, then hold still long enough for the stagehand to lock the lamp.</p>
+  <p class="small">The shadows are geometric projections, not hand-authored animations. Later rooms narrow the marks and add more figures.</p>
+  <button id="start" class="primary">light the first room</button>
+</section>
+<section id="picker" class="overlay hidden">
+  <div class="picker-head"><h2>Rooms</h2><button id="close">close ×</button></div>
+  <div id="roomList" class="room-list"></div>
+</section>
+<section id="win" class="win hidden" aria-live="polite">
+  <small id="winKicker">ROOM HELD</small>
+  <strong id="winTitle">FIRST MARK</strong>
+  <p id="winText"></p>
+  <div><button id="again">replay</button><button id="next" class="primary">next room</button></div>
+</section>
+<script src="game.js"></script>
+</body>
+</html>
