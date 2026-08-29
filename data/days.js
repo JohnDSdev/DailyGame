@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-08-29",
+    title: "Long Shadow",
+    type: "Light geometry",
+    description: "Drag a hanging lamp along a brass rail and use real geometric projection to place every numbered shadow tip inside its matching floor mark. Nine hand-built rooms tighten the tolerances and add more figures.",
+    accent: "#d8a74a",
+    preview: "games/2026-08-29/preview.svg",
+    game: "games/2026-08-29/index.html",
+    article: "articles/2026-08-29.html",
+    articleTitle: "Water can darken sand without changing its pigment",
+    articleDescription: "Wet sand looks darker because filling air gaps with water changes refractive-index contrast, scattering paths and the odds that light is absorbed before it escapes."
+  },
+  {
     date: "2026-08-28",
     title: "High Water",
     type: "Flood-routing strategy",
