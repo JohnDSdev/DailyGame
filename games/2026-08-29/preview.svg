@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="#281615"/>
+<path d="M0 0h1200v610H0z" fill="#4a2220"/>
+<g opacity=".15" fill="#120d0c"><path d="M0 0h70v610H0zM140 0h70v610h-70zM280 0h70v610h-70zM420 0h70v610h-70zM560 0h70v610h-70zM700 0h70v610h-70zM840 0h70v610h-70zM980 0h70v610h-70zM1120 0h80v610h-80z"/></g>
+<path d="M80 150H1120" stroke="#d8a74a" stroke-width="10"/>
+<circle cx="380" cy="150" r="30" fill="#d8a74a"/><path d="M356 155h48l-10 34h-28z" fill="#15100f"/><circle cx="380" cy="181" r="10" fill="#f3ca6e"/>
+<path d="M380 190L65 680h1070z" fill="#e8bd60" opacity=".09"/>
+<rect y="680" width="1200" height="220" fill="#17100f"/><path d="M0 680h1200" stroke="#8a6d46" stroke-width="5"/>
+<g fill="#080606" opacity=".75"><path d="M500 680h22l-265 55z"/><path d="M710 680h22l160 55z"/><path d="M850 680h22l229 55z"/></g>
+<g><path d="M511 453v227" stroke="#c95b43" stroke-width="18"/><circle cx="511" cy="438" r="16" fill="#15100f"/><path d="M721 354v326" stroke="#8ba45b" stroke-width="18"/><circle cx="721" cy="338" r="16" fill="#15100f"/><path d="M861 493v187" stroke="#6f9da2" stroke-width="18"/><circle cx="861" cy="478" r="16" fill="#15100f"/></g>
+<g><rect x="218" y="694" width="84" height="20" fill="#c95b43"/><rect x="850" y="694" width="84" height="20" fill="#8ba45b"/><rect x="1046" y="694" width="84" height="20" fill="#6f9da2"/></g>
+<text x="72" y="92" fill="#e7d8b4" font-family="Courier New,monospace" font-size="28" font-weight="700" letter-spacing="6">LIGHT GEOMETRY / 008</text>
+<text x="64" y="830" fill="#e7d8b4" font-family="Arial Black,Arial,sans-serif" font-size="128" font-weight="900" letter-spacing="-9">LONG SHADOW</text>
+</svg>
