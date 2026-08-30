@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-08-30",
+    title: "Overprint",
+    type: "Letterpress puzzle",
+    description: "Choose cyan, magenta and yellow printing plates, rotate them, and pull the press. Ink only accumulates, so match each target proof exactly across nine hand-built sheets with one-use plates and minimum-pull solutions.",
+    accent: "#c4487a",
+    preview: "games/2026-08-30/preview.svg",
+    game: "games/2026-08-30/index.html",
+    article: "articles/2026-08-30.html",
+    articleTitle: "Desert ants carry an odometer in their legs",
+    articleDescription: "Leg-length experiments made desert ants overshoot or undershoot home, evidence that their path-integration system measures distance through a robust stride-based odometer."
+  },
+  {
     date: "2026-08-29",
     title: "Long Shadow",
     type: "Light geometry",
