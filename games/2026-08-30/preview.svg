@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="#201f1b"/>
+<rect x="70" y="58" width="1060" height="784" fill="#2b2923" stroke="#8f8777" stroke-width="2"/>
+<text x="110" y="130" fill="#d6cfbd" font-family="monospace" font-size="24" font-weight="700" letter-spacing="3">DAILY GAME / 009 / OVERPRINT PUZZLE</text>
+<text x="104" y="250" fill="#efe6cf" font-family="Arial Black,Arial" font-size="122" font-weight="900" letter-spacing="-8">OVERPRINT</text>
+<g transform="translate(120 320)">
+  <rect width="470" height="470" fill="#efe6cf" transform="rotate(-1 235 235)"/>
+  <g stroke="#201f1b" stroke-opacity=".08" stroke-width="3">
+    <path d="M94 0V470M188 0V470M282 0V470M376 0V470M0 94H470M0 188H470M0 282H470M0 376H470"/>
+  </g>
+  <g opacity=".92">
+    <rect x="94" y="94" width="94" height="94" fill="#35a9b8"/>
+    <rect x="188" y="94" width="94" height="94" fill="#5f9563"/>
+    <rect x="282" y="94" width="94" height="94" fill="#d7b92e"/>
+    <rect x="94" y="188" width="94" height="94" fill="#35a9b8"/>
+    <rect x="188" y="188" width="94" height="94" fill="#343733"/>
+    <rect x="188" y="282" width="94" height="94" fill="#d7b92e"/>
+  </g>
+</g>
+<g transform="translate(660 350)">
+  <text x="0" y="-32" fill="#9e9685" font-family="monospace" font-size="20" letter-spacing="2">METAL PLATES / C M Y</text>
+  <rect width="150" height="150" fill="#171713" stroke="#70695d" stroke-width="3"/>
+  <rect x="30" y="60" width="30" height="30" fill="#35a9b8"/><rect x="60" y="60" width="30" height="30" fill="#35a9b8"/><rect x="60" y="90" width="30" height="30" fill="#35a9b8"/>
+  <rect x="185" width="150" height="150" fill="#171713" stroke="#70695d" stroke-width="3"/>
+  <rect x="215" y="30" width="30" height="30" fill="#c4487a"/><rect x="215" y="60" width="30" height="30" fill="#c4487a"/><rect x="245" y="60" width="30" height="30" fill="#c4487a"/><rect x="275" y="60" width="30" height="30" fill="#c4487a"/>
+  <rect x="370" width="150" height="150" fill="#171713" stroke="#70695d" stroke-width="3"/>
+  <rect x="400" y="30" width="30" height="30" fill="#d7b92e"/><rect x="400" y="60" width="30" height="30" fill="#d7b92e"/><rect x="430" y="60" width="30" height="30" fill="#d7b92e"/><rect x="460" y="60" width="30" height="30" fill="#d7b92e"/>
+  <rect x="0" y="220" width="520" height="95" fill="#efe6cf"/>
+  <text x="260" y="278" text-anchor="middle" fill="#201f1b" font-family="monospace" font-size="28" font-weight="700" letter-spacing="3">PULL PRESS</text>
+  <text x="0" y="375" fill="#9e9685" font-family="monospace" font-size="18">ROTATE · OVERPRINT · MATCH THE PROOF</text>
+</g>
+</svg>
