@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-08-31",
+    title: "Hot Read",
+    type: "Thermal deduction",
+    description: "Probe a metal grid with a limited number of samples, read the summed heat signal, and infer the exact cells hiding one to three heating elements across eight hand-built deduction sheets.",
+    accent: "#ff9d2e",
+    preview: "games/2026-08-31/preview.svg",
+    game: "games/2026-08-31/index.html",
+    article: "articles/2026-08-31.html",
+    articleTitle: "Skunk cabbage keeps a warm flower in freezing air",
+    articleDescription: "Eastern skunk cabbage can regulate its flowering spadix far above ambient temperature by changing respiratory heat production, although field measurements show the warm state has real environmental limits."
+  },
+  {
     date: "2026-08-30",
     title: "Overprint",
     type: "Letterpress puzzle",
