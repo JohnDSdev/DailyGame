@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="#17130f"/>
+<g stroke="#5d4b38" stroke-width="2" opacity=".35">
+<path d="M0 90H1200M0 180H1200M0 270H1200M0 360H1200M0 450H1200M0 540H1200M0 630H1200M0 720H1200M0 810H1200"/>
+<path d="M90 0V900M180 0V900M270 0V900M360 0V900M450 0V900M540 0V900M630 0V900M720 0V900M810 0V900M900 0V900M990 0V900M1080 0V900"/>
+</g>
+<text x="72" y="120" fill="#ff9d2e" font-family="Courier New, monospace" font-size="26" font-weight="700" letter-spacing="5">THERMAL SURVEY / SHEET 08</text>
+<text x="70" y="250" fill="#f0dfb8" font-family="Arial Black, Arial, sans-serif" font-size="140" font-weight="900" letter-spacing="-8">HOT READ</text>
+<g transform="translate(160 330)">
+<g fill="#261f18" stroke="#765f45" stroke-width="3">
+<rect x="0" y="0" width="90" height="90"/><rect x="102" y="0" width="90" height="90"/><rect x="204" y="0" width="90" height="90"/><rect x="306" y="0" width="90" height="90"/><rect x="408" y="0" width="90" height="90"/><rect x="510" y="0" width="90" height="90"/>
+<rect x="0" y="102" width="90" height="90"/><rect x="102" y="102" width="90" height="90"/><rect x="204" y="102" width="90" height="90"/><rect x="306" y="102" width="90" height="90"/><rect x="408" y="102" width="90" height="90"/><rect x="510" y="102" width="90" height="90"/>
+<rect x="0" y="204" width="90" height="90"/><rect x="102" y="204" width="90" height="90"/><rect x="204" y="204" width="90" height="90"/><rect x="306" y="204" width="90" height="90"/><rect x="408" y="204" width="90" height="90"/><rect x="510" y="204" width="90" height="90"/>
+<rect x="0" y="306" width="90" height="90"/><rect x="102" y="306" width="90" height="90"/><rect x="204" y="306" width="90" height="90"/><rect x="306" y="306" width="90" height="90"/><rect x="408" y="306" width="90" height="90"/><rect x="510" y="306" width="90" height="90"/>
+</g>
+<g fill="#ff9d2e" font-family="Courier New, monospace" font-weight="900" font-size="34" text-anchor="middle">
+<text x="45" y="57">9</text><text x="249" y="57">4</text><text x="555" y="57">1</text>
+<text x="147" y="159">12</text><text x="351" y="159">7</text>
+<text x="45" y="261">6</text><text x="453" y="261">10</text>
+</g>
+<g stroke="#ff4d1f" stroke-width="10">
+<path d="M112 320l70 70M182 320l-70 70"/><path d="M418 116l70 70M488 116l-70 70"/><path d="M520 320l70 70M590 320l-70 70"/>
+</g>
+</g>
+<text x="72" y="830" fill="#cfbea0" font-family="Courier New, monospace" font-size="24">PROBE THE PLATE. INFER THE HEATERS.</text>
+</svg>
