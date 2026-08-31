@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#17130f">
+<title>Hot Read | Daily Game</title>
+<style>
+:root{--bg:#17130f;--paper:#e7d8b4;--ink:#1d1711;--amber:#ff9d2e;--hot:#ff4d1f;--cool:#5a706b;--rule:#8a765b}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--paper);font-family:"Courier New",monospace}
+button,a{font:inherit;color:inherit}button{border:0;background:none}a{text-decoration:none}
+body{display:grid;grid-template-rows:44px minmax(0,1fr) 112px;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
+header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 9px;border-bottom:1px solid #6f5d46;font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+header a{opacity:.7}.title{font-weight:900;letter-spacing:.14em}.tools{justify-self:end;display:flex}.tools button{padding:10px 6px;text-transform:uppercase}
+main{position:relative;min-height:0;overflow:hidden;background:
+linear-gradient(rgba(255,157,46,.03) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,157,46,.03) 1px,transparent 1px),#17130f;background-size:18px 18px}
+#board{position:absolute;left:50%;top:50%;transform:translate(-50%,-48%);display:grid;gap:4px;touch-action:manipulation}
+.cell{position:relative;display:grid;place-items:center;min-width:0;aspect-ratio:1;background:#261f18;border:1px solid #6f5d46;color:var(--paper);font-weight:900;font-size:14px;cursor:pointer}
+.cell.probed{background:#2f261c;border-color:var(--amber)}.cell.marked{outline:3px solid var(--hot);outline-offset:-4px}.cell.marked::after{content:"×";font:900 28px/1 Arial,sans-serif;color:var(--hot)}
+.cell.hint{animation:hint .9s steps(2,end) infinite}@keyframes hint{50%{box-shadow:inset 0 0 0 3px var(--amber)}}
+.reading{position:absolute;inset:0;display:grid;place-items:center;font-size:15px;color:var(--amber)}
+.topline{position:absolute;left:9px;right:9px;top:8px;display:flex;justify-content:space-between;pointer-events:none;font-size:9px;letter-spacing:.06em;text-transform:uppercase}
+.topline strong{display:block;margin-top:2px;font-size:12px}.topline .right{text-align:right}
+.status{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);width:min(94%,650px);text-align:center;font:12px/1.35 Arial,sans-serif;color:#d9c9a8;pointer-events:none}
+footer{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px;align-items:center;padding:7px 9px;border-top:1px solid #6f5d46;background:#201913}
+.copy{font-size:9px;line-height:1.35;text-transform:uppercase;letter-spacing:.04em}.copy b{color:var(--amber)}
+.actions{display:grid;grid-template-columns:repeat(2,auto);gap:5px}.actions button{min-height:42px;border:1px solid #806c50;padding:0 9px;text-transform:uppercase;font-weight:800;font-size:9px;cursor:pointer}
+.actions .active,.actions .go{background:var(--amber);color:#1b140d;border-color:var(--amber)}.actions button:disabled{opacity:.3}.actions button[hidden]{display:none}
+.overlay{position:fixed;inset:0;z-index:20;background:#17130f;padding:clamp(22px,6vw,68px);display:flex;flex-direction:column;justify-content:center;overflow:auto}
+.overlay.hidden{display:none}.overlay small{color:var(--amber);font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.overlay h1{margin:10px 0 18px;font:900 clamp(68px,21vw,180px)/.72 Arial Black,Arial,sans-serif;letter-spacing:-.08em;text-transform:uppercase;color:#f1dfb6}
+.overlay p{max-width:760px;margin:0 0 24px;font:18px/1.45 Georgia,serif;color:#d6c7a5}
+.primary{width:max-content;background:var(--amber);color:#17130f;padding:14px 18px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;cursor:pointer}
+.pickhead{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid #806c50;padding-bottom:10px}.pickhead h2{margin:0;font:900 clamp(48px,12vw,100px)/.8 Arial Black,Arial,sans-serif;letter-spacing:-.06em;text-transform:uppercase}.close{padding:10px;text-transform:uppercase}
+.levels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #6f5d46;border-left:1px solid #6f5d46;margin-top:18px}.levels button{min-height:84px;text-align:left;border-right:1px solid #6f5d46;border-bottom:1px solid #6f5d46;padding:10px;cursor:pointer}.levels button[disabled]{opacity:.22}.levels strong{display:block;font-size:22px}.levels span{display:block;margin-top:6px;font-size:9px;text-transform:uppercase}
+.flash{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);font:900 clamp(42px,13vw,110px)/.8 Arial Black,Arial,sans-serif;text-transform:uppercase;letter-spacing:-.06em;opacity:0;pointer-events:none}.flash.on{animation:pop 1s ease}.flash.good{color:#ff9d2e}.flash.bad{color:#ff4d1f}@keyframes pop{15%,70%{opacity:1}100%{opacity:0;transform:translate(-50%,-58%)}}
+@media(max-width:600px){body{grid-template-rows:42px minmax(0,1fr) 118px}.overlay{justify-content:flex-end;padding-bottom:calc(30px + env(safe-area-inset-bottom))}.overlay h1{font-size:min(24vw,98px)}.levels{grid-template-columns:repeat(2,minmax(0,1fr))}.levels button{min-height:70px}.copy{max-width:170px}.actions button{padding:0 7px}}
+@media(prefers-reduced-motion:reduce){.cell.hint{animation:none;box-shadow:inset 0 0 0 3px var(--amber)}.flash.on{animation-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header><a href="../../index.html">← archive</a><div class="title">Hot Read</div><div class="tools"><button id="sound">sound on</button><button id="levels">sheets</button></div></header>
+<main id="stage">
+  <div class="topline"><div>sheet<strong id="sheetName">01 / warm-up</strong></div><div class="right">samples / candidates<strong><span id="samples">0</span> / <span id="candidates">—</span></strong></div></div>
+  <div id="board" aria-label="thermal probe grid"></div>
+  <div id="status" class="status"></div><div id="flash" class="flash"></div>
+</main>
+<footer>
+  <div class="copy"><b>probe mode:</b> tap metal to take a reading. switch to mark mode and mark every hidden heater.</div>
+  <div class="actions">
+    <button id="probeMode" class="active">probe</button><button id="markMode">mark</button>
+    <button id="hint">suggest</button><button id="submit" class="go">check</button>
+    <button id="next" class="go" hidden>next sheet</button><button id="reset">reset</button>
+  </div>
+</footer>
+<section id="intro" class="overlay">
+  <small>Daily Game 010 / thermal deduction</small>
+  <h1>Hot Read</h1>
+  <p>Heating elements are hidden under a metal plate. A probe gives one integer: the sum of every heater's signal at that square. Each step away weakens a heater by one point. You have only a few samples. Use the numbers to locate every heater, then switch to mark mode and mark the cells.</p>
+  <button id="start" class="primary">take first sheet</button>
+</section>
+<section id="picker" class="overlay hidden"><div class="pickhead"><h2>Sheets</h2><button id="close" class="close">close ×</button></div><div id="levelList" class="levels"></div></section>
+<script>
+(()=>{"use strict";
+const $=s=>document.querySelector(s), board=$('#board'), reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const LEVELS=[
+{name:'warm-up',n:4,k:1,budget:2,heaters:[1],hint:'One heater. Two samples are enough.'},
+{name:'cold corner',n:5,k:1,budget:2,heaters:[23],hint:'The edges tell you more than the center.'},
+{name:'opposites',n:5,k:2,budget:3,heaters:[4,20],hint:'Two heaters. Read the field as a sum.'},
+{name:'offset',n:5,k:2,budget:4,heaters:[0,17],hint:'A zero can be as useful as a hot reading.'},
+{name:'cross-talk',n:6,k:2,budget:4,heaters:[17,21],hint:'Separate overlapping signals.'},
+{name:'three lamps',n:6,k:3,budget:4,heaters:[4,5,29],hint:'Three sources can make one deceptively hot patch.'},
+{name:'tight scan',n:6,k:3,budget:5,heaters:[8,9,33],hint:'Five samples. Choose each one for information.'},
+{name:'final plate',n:6,k:3,budget:5,heaters:[13,18,31],hint:'The field is crowded. Candidate count is your friend.'}
+];
+let level=0,L=LEVELS[0],mode='probe',probes=new Map(),marks=new Set(),candidateLayouts=[],unlocked=Math.min(LEVELS.length,Number(localStorage.getItem('hotReadUnlocked')||1)),bests=JSON.parse(localStorage.getItem('hotReadBests')||'{}'),soundOn=localStorage.getItem('hotReadSound')!=='off',audio=null,started=false;
+function tone(f,d=.07,type='sine',g=.035){if(!soundOn)return;try{audio=audio||new(AudioContext||webkitAudioContext)();const o=audio.createOscillator(),a=audio.createGain();o.type=type;o.frequency.value=f;a.gain.setValueAtTime(g,audio.currentTime);a.gain.exponentialRampToValueAtTime(.0001,audio.currentTime+d);o.connect(a);a.connect(audio.destination);o.start();o.stop(audio.currentTime+d)}catch(e){}}
+function buzz(v){navigator.vibrate?.(v)}
+function combos(n,k){const out=[],cur=[];function rec(start,left){if(!left){out.push(cur.slice());return}for(let i=start;i<=n-left;i++){cur.push(i);rec(i+1,left-1);cur.pop()}}rec(0,k);return out}
+function read(layout,idx){const x=idx%L.n,y=Math.floor(idx/L.n);let s=0;for(const h of layout){const hx=h%L.n,hy=Math.floor(h/L.n);s+=Math.max(0,7-(Math.abs(x-hx)+Math.abs(y-hy)))}return s}
+function rebuildCandidates(){candidateLayouts=combos(L.n*L.n,L.k).filter(c=>{for(const [i,v] of probes)if(read(c,i)!==v)return false;return true});$('#candidates').textContent=candidateLayouts.length}
+function setMode(m){mode=m;$('#probeMode').classList.toggle('active',m==='probe');$('#markMode').classList.toggle('active',m==='mark');$('#status').textContent=m==='probe'?(probes.size<L.budget?L.hint:'sample budget used. switch to mark mode.'):`mark exactly ${L.k} heater${L.k===1?'':'s'}, then check.`}
+function render(){const max=Math.min(56,Math.floor((innerWidth-22)/L.n));board.style.gridTemplateColumns=`repeat(${L.n},${max}px)`;board.innerHTML='';for(let i=0;i<L.n*L.n;i++){const b=document.createElement('button');b.className='cell';b.dataset.i=i;b.setAttribute('aria-label',`cell ${i+1}`);if(probes.has(i)){b.classList.add('probed');const r=document.createElement('span');r.className='reading';r.textContent=probes.get(i);b.appendChild(r)}if(marks.has(i))b.classList.add('marked');b.onclick=()=>tap(i);board.appendChild(b)}$('#samples').textContent=`${probes.size}/${L.budget}`;$('#submit').disabled=marks.size!==L.k}
+function tap(i){if(!started)return;if(mode==='probe'){if(probes.has(i)||probes.size>=L.budget)return;const v=read(L.heaters,i);probes.set(i,v);tone(170+v*18,.055,'square',.022);buzz(8);rebuildCandidates();render();$('#status').textContent=probes.size<L.budget?`${candidateLayouts.length} layouts still fit the readings.`:'sample budget used. switch to mark mode.'}else{if(marks.has(i))marks.delete(i);else if(marks.size<L.k)marks.add(i);tone(320,.035,'triangle',.018);render()}}
+function reset(i=level){level=i;L=LEVELS[i];probes=new Map();marks=new Set();mode='probe';started=true;rebuildCandidates();$('#sheetName').textContent=`${String(i+1).padStart(2,'0')} / ${L.name}`;$('#next').hidden=true;$('#submit').hidden=false;$('#hint').hidden=false;$('#probeMode').hidden=false;$('#markMode').hidden=false;$('#reset').hidden=false;setMode('probe');render()}
+function suggest(){if(mode!=='probe'||probes.size>=L.budget||!candidateLayouts.length)return;let best=-1,bestWorst=Infinity,bestKinds=-1;for(let i=0;i<L.n*L.n;i++){if(probes.has(i))continue;const groups=new Map();for(const c of candidateLayouts){const r=read(c,i);groups.set(r,(groups.get(r)||0)+1)}const worst=Math.max(...groups.values());if(worst<bestWorst||(worst===bestWorst&&groups.size>bestKinds)){best=i;bestWorst=worst;bestKinds=groups.size}}document.querySelectorAll('.cell').forEach(c=>c.classList.remove('hint'));document.querySelector(`.cell[data-i="${best}"]`)?.classList.add('hint');$('#status').textContent='suggestion marks a high-information probe, not a heater.';tone(520,.06,'sine',.02)}
+function check(){if(marks.size!==L.k)return;const a=[...marks].sort((x,y)=>x-y),b=[...L.heaters].sort((x,y)=>x-y),good=a.every((v,i)=>v===b[i]);if(good){const score=probes.size;const old=bests[level];if(old==null||score<old){bests[level]=score;localStorage.setItem('hotReadBests',JSON.stringify(bests))}if(level===unlocked-1&&unlocked<LEVELS.length){unlocked++;localStorage.setItem('hotReadUnlocked',String(unlocked));renderPicker()}$('#status').textContent=level<LEVELS.length-1?'correct. next sheet unlocked.':'correct. all plates cleared.';$('#submit').hidden=true;$('#hint').hidden=true;$('#probeMode').hidden=true;$('#markMode').hidden=true;$('#next').hidden=false;$('#next').textContent=level<LEVELS.length-1?'next sheet':'sheets';tone(420,.08);setTimeout(()=>tone(630,.12),90);buzz([10,20,25]);flash('matched','good')}else{$('#status').textContent='those marks do not match the hidden heaters. keep the readings and revise.';tone(80,.16,'sawtooth',.03);buzz([25,20,25]);flash('miss','bad')}}
+function flash(t,c){const e=$('#flash');e.textContent=t;e.className='flash '+c;e.classList.remove('on');void e.offsetWidth;e.classList.add('on')}
+function renderPicker(){const box=$('#levelList');box.innerHTML=LEVELS.map((l,i)=>`<button data-i="${i}" ${i>=unlocked?'disabled':''}><strong>${String(i+1).padStart(2,'0')}</strong><span>${l.name}${bests[i]!=null?` · best ${bests[i]}`:''}</span></button>`).join('');box.querySelectorAll('button:not([disabled])').forEach(b=>b.onclick=()=>{reset(Number(b.dataset.i));$('#picker').classList.add('hidden')})}
+$('#probeMode').onclick=()=>setMode('probe');$('#markMode').onclick=()=>setMode('mark');$('#hint').onclick=suggest;$('#submit').onclick=check;$('#reset').onclick=()=>reset(level);$('#next').onclick=()=>{if(level<LEVELS.length-1)reset(level+1);else{$('#picker').classList.remove('hidden');renderPicker()}};$('#levels').onclick=()=>{$('#picker').classList.remove('hidden');renderPicker()};$('#close').onclick=()=>$('#picker').classList.add('hidden');$('#start').onclick=()=>{$('#intro').classList.add('hidden');reset(0)};$('#sound').onclick=()=>{soundOn=!soundOn;localStorage.setItem('hotReadSound',soundOn?'on':'off');$('#sound').textContent=soundOn?'sound on':'sound off';if(soundOn)tone(240,.05)};$('#sound').textContent=soundOn?'sound on':'sound off';
+window.addEventListener('resize',render);window.addEventListener('keydown',e=>{if(e.key==='r'||e.key==='R')reset(level);if(e.key==='p'||e.key==='P')setMode('probe');if(e.key==='m'||e.key==='M')setMode('mark');if(e.key==='h'||e.key==='H')suggest();if(e.key==='Enter'&&!$('#next').hidden)$('#next').click();if(e.key==='Escape')$('#picker').classList.add('hidden')});
+renderPicker();rebuildCandidates();render();
+})();
+</script>
+</body>
+</html>
