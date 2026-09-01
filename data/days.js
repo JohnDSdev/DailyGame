@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-09-01",
+    title: "Signal Lamp",
+    type: "Morse timing skill",
+    description: "Press and hold one signal-lamp key to transmit visible Morse patterns. Dots want a short pulse, dashes three times longer, and every mark is graded by timing across eight increasingly long transmissions.",
+    accent: "#c59a45",
+    preview: "games/2026-09-01/preview.svg",
+    game: "games/2026-09-01/index.html",
+    article: "articles/2026-09-01.html",
+    articleTitle: "Old books smell because paper gives off its breakdown products",
+    articleDescription: "Aging paper releases a mixture of volatile compounds. Headspace chemistry can reveal clues about cellulose degradation, acidity, lignin and other parts of a book's material history."
+  },
+  {
     date: "2026-08-31",
     title: "Hot Read",
     type: "Thermal deduction",
