@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-09-02",
+    title: "Night Exchange",
+    type: "Switchboard arcade",
+    description: "Work a manual telephone exchange with one finger: drag lit incoming lines to the named subscriber, then pull finished cords before the next calls arrive. Six shifts increase call volume, destinations and pressure.",
+    accent: "#c79248",
+    preview: "games/2026-09-02/preview.svg",
+    game: "games/2026-09-02/index.html",
+    article: "articles/2026-09-02.html",
+    articleTitle: "Roman concrete's white lumps may have helped it heal cracks",
+    articleDescription: "Calcium-rich lime clasts once dismissed as poor mixing may instead record hot mixing with quicklime. Experiments and a preserved Pompeii construction site show how those clasts could later feed crack-filling reactions."
+  },
+  {
     date: "2026-09-01",
     title: "Signal Lamp",
     type: "Morse timing skill",
