@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-09-03",
+    title: "Interlock",
+    type: "Railway interlocking",
+    description: "Trains cannot stop. Tap three turnout lamps before each locomotive reaches its locking circle, routing lettered trains to four matching platforms across six increasingly busy shifts.",
+    accent: "#e2a33d",
+    preview: "games/2026-09-03/preview.svg",
+    game: "games/2026-09-03/index.html",
+    article: "articles/2026-09-03.html",
+    articleTitle: "Some bacteria grow compass needles inside themselves",
+    articleDescription: "Magnetotactic bacteria build membrane-wrapped crystals of magnetic minerals and arrange them into chains. The resulting magnetic moment can align an entire swimming cell with Earth's field."
+  },
+  {
     date: "2026-09-02",
     title: "Night Exchange",
     type: "Switchboard arcade",
