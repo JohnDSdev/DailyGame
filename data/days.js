@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-09-04",
+    title: "Bobbin Run",
+    type: "Alternating-stitch puzzle",
+    description: "Sew one continuous strand through a field of bobbins. Solid red stitches belong on the front, dotted blue stitches on the back, and every move flips the needle side, turning each pattern into a constrained one-stroke route.",
+    accent: "#d5aa5e",
+    preview: "games/2026-09-04/preview.svg",
+    game: "games/2026-09-04/index.html",
+    article: "articles/2026-09-04.html",
+    articleTitle: "Peeling tape can make X-rays in a vacuum",
+    articleDescription: "In a moderate vacuum, peeling ordinary adhesive tape can produce nanosecond X-ray flashes correlated with stick-slip motion. The same charge-separation process is far tamer in ordinary air."
+  },
+  {
     date: "2026-09-03",
     title: "Interlock",
     type: "Railway interlocking",
