@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<rect width="800" height="600" fill="#171b26"/>
+<path d="M0 0L800 600M-120 0L680 600M120 0L920 600" stroke="#232a39" stroke-width="2"/>
+<g stroke-linecap="round" fill="none">
+<path d="M170 160L610 150" stroke="#e26b5b" stroke-width="12"/>
+<path d="M610 150L645 430" stroke="#78a8c8" stroke-width="10" stroke-dasharray="22 20"/>
+<path d="M645 430L195 445" stroke="#e26b5b" stroke-width="12"/>
+<path d="M195 445L170 160" stroke="#78a8c8" stroke-width="10" stroke-dasharray="22 20"/>
+<path d="M170 160L405 300" stroke="#e26b5b" stroke-width="12"/>
+<path d="M405 300L645 430" stroke="#78a8c8" stroke-width="10" stroke-dasharray="22 20"/>
+</g>
+<g fill="#e9dfc6" stroke="#0f1219" stroke-width="8">
+<circle cx="610" cy="150" r="25"/><circle cx="645" cy="430" r="25"/><circle cx="195" cy="445" r="25"/><circle cx="405" cy="300" r="25"/>
+</g>
+<circle cx="170" cy="160" r="30" fill="#d5aa5e" stroke="#fff3d6" stroke-width="7"/>
+<g fill="#171b26"><circle cx="170" cy="160" r="8"/><circle cx="610" cy="150" r="7"/><circle cx="645" cy="430" r="7"/><circle cx="195" cy="445" r="7"/><circle cx="405" cy="300" r="7"/></g>
+<text x="52" y="540" fill="#e9dfc6" font-family="Arial Black,Arial,sans-serif" font-size="78" font-weight="900" letter-spacing="-5">BOBBIN RUN</text>
+<text x="57" y="580" fill="#d5aa5e" font-family="Courier New,monospace" font-size="20" font-weight="700" letter-spacing="3">FRONT / BACK / ONE STRAND</text>
+</svg>
