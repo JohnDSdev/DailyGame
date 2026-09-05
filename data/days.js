@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-09-05",
+    title: "Beat Bench",
+    type: "Acoustic tuning",
+    description: "Tune steel reeds by dragging brass weights along hidden calibration scales. Compare each reed against its reference, watch and hear the interference beat slow, then pass eight increasingly strict workshop jobs.",
+    accent: "#c49b45",
+    preview: "games/2026-09-05/preview.svg",
+    game: "games/2026-09-05/index.html",
+    article: "articles/2026-09-05.html",
+    articleTitle: "Glass frogs hide most of their red blood cells while they sleep",
+    articleDescription: "Resting glass frogs can remove about 89 percent of their red blood cells from circulation and pack them into a reflective liver, increasing transparency while leaving a strange clotting problem unsolved."
+  },
+  {
     date: "2026-09-04",
     title: "Bobbin Run",
     type: "Alternating-stitch puzzle",
