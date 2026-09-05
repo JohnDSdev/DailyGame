@@ -60,7 +60,7 @@ function draw(now=performance.now()){ctx.clearRect(0,0,W,H);ctx.fillStyle="#6848
 ctx.textAlign="left";ctx.fillStyle="#f0e3c0";ctx.font="700 9px Courier New";ctx.fillText("DRAG THE BRASS WEIGHT. EACH SETUP HIDES A DIFFERENT ZERO POINT.",18,H-16)}
 function hitRow(x,y){for(let i=0;i<reeds.length;i++){const g=rowGeom(i);if(y>=g.y-g.h/2&&y<=g.y+g.h/2&&x>=15&&x<=W-15)return i}return null}
 let dragging=false;
-canvas.addEventListener("pointerdown",e=>{e.preventDefault();if(!started||won)return;const b=canvas.getBoundingClientRect(),x=e.clientX-b.left,y=e.clientY-b.top,i=hitRow(x,y);if(i==null)return;if(comparing)stopCompare();selected=i;dragging=true;canvas.setPointerCapture?.(e.pointerId);const g=rowGeom(i);reeds[i].raw=xToRaw(x,g);updateAudio();tone(230+i*28,.02,"triangle",.009);draw()});
+canvas.addEventListener("pointerdown",e=>{e.preventDefault();if(!started||won)return;const b=canvas.getBoundingClientRect(),x=e.clientX-b.left,y=e.clientY-b.top,i=hitRow(x,y);if(i==null)return;if(comparing&&i!==selected)stopCompare();selected=i;dragging=true;canvas.setPointerCapture?.(e.pointerId);const g=rowGeom(i);reeds[i].raw=xToRaw(x,g);updateAudio();tone(230+i*28,.02,"triangle",.009);draw()});
 canvas.addEventListener("pointermove",e=>{if(!dragging||won)return;const b=canvas.getBoundingClientRect(),x=e.clientX-b.left,g=rowGeom(selected);reeds[selected].raw=xToRaw(x,g);updateAudio();draw()});
 canvas.addEventListener("pointerup",()=>dragging=false);canvas.addEventListener("pointercancel",()=>dragging=false);
 function updateAudio(){if(comparing&&osc.length===2){try{osc[1].frequency.setTargetAtTime(currentFreq(reeds[selected]),audio.currentTime,.015)}catch(e){}}}
