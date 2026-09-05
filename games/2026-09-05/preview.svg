@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="t d">
+<title id="t">Beat Bench game preview</title><desc id="d">A wooden tuning bench with steel reeds, brass sliding weights, and a drawn beat waveform.</desc>
+<rect width="1200" height="675" fill="#4c321f"/>
+<g opacity=".18" stroke="#d3a468" stroke-width="3">
+<path d="M0 86H1200M0 188H1200M0 302H1200M0 426H1200M0 552H1200"/>
+<path d="M82 0L118 675M260 0L300 675M454 0L490 675M648 0L686 675M842 0L880 675M1038 0L1076 675"/>
+</g>
+<rect x="72" y="70" width="1056" height="530" fill="#e8ddbf" stroke="#211b16" stroke-width="8"/>
+<text x="104" y="126" fill="#211b16" font-family="Courier New,monospace" font-weight="700" font-size="24">TUNING JOB 08 · FULL BENCH</text>
+<g font-family="Courier New,monospace" font-weight="900" font-size="34" fill="#211b16">
+<text x="108" y="210">A3</text><text x="108" y="310">D4</text><text x="108" y="410">F4</text><text x="108" y="510">A4</text>
+</g>
+<g stroke="#858b89" stroke-width="20" stroke-linecap="round">
+<path d="M220 198H1035"/><path d="M220 298H1035"/><path d="M220 398H1035"/><path d="M220 498H1035"/>
+</g>
+<g stroke="#5a5f5d" stroke-width="3">
+<path d="M310 180V216M430 180V216M550 180V216M670 180V216M790 180V216M910 180V216"/>
+<path d="M310 280V316M430 280V316M550 280V316M670 280V316M790 280V316M910 280V316"/>
+<path d="M310 380V416M430 380V416M550 380V416M670 380V416M790 380V416M910 380V416"/>
+<path d="M310 480V516M430 480V516M550 480V516M670 480V516M790 480V516M910 480V516"/>
+</g>
+<g fill="#c49b45" stroke="#5c441f" stroke-width="5">
+<rect x="492" y="164" width="56" height="68"/><rect x="684" y="264" width="56" height="68"/><rect x="390" y="364" width="56" height="68"/><rect x="814" y="464" width="56" height="68"/>
+</g>
+<path d="M222 151 C260 126 300 176 340 151 S420 176 460 151 S540 176 580 151 S660 176 700 151 S780 176 820 151 S900 176 940 151 S1020 176 1060 151" fill="none" stroke="#a63e32" stroke-width="6"/>
+<text x="812" y="570" fill="#536d45" font-family="Courier New,monospace" font-size="28" font-weight="900">BEAT: SLOW</text>
+</svg>
