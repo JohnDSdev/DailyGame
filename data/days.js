@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-09-06",
+    title: "Mothlight",
+    type: "Simultaneous flock puzzle",
+    description: "Tap one of eight lantern posts and move the whole garden at once. Amber moths step toward the light while blue moths step away; use the shared motion to place every numbered moth on its matching roost across eight hand-built nights.",
+    accent: "#f0bd45",
+    preview: "games/2026-09-06/preview.svg",
+    game: "games/2026-09-06/index.html",
+    article: "articles/2026-09-06.html",
+    articleTitle: "Scallop eyes use mirrors made of guanine crystals",
+    articleDescription: "Scallops can have around 200 eyes, and each focuses light mainly with a concave mirror built from ordered layers of square guanine crystal plates rather than with its lens alone."
+  },
+  {
     date: "2026-09-05",
     title: "Beat Bench",
     type: "Acoustic tuning",
