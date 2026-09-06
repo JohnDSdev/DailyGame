@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#eee7d3">
+<title>Scallop eyes use mirrors made of guanine crystals | Daily Game</title>
+<style>
+:root{--paper:#eee7d3;--ink:#171713;--sea:#295d63;--shell:#b65d3d;--line:#9b927a;--blue:#7cb0b1}
+*{box-sizing:border-box}html{background:#d8d0bb}body{margin:0;color:var(--ink);background:var(--paper);font-family:Georgia,"Times New Roman",serif}a{color:#174f58;text-underline-offset:3px}
+header{border-bottom:1px solid var(--ink);padding:14px max(18px,calc((100vw - 760px)/2));font:10px "Courier New",monospace;text-transform:uppercase;letter-spacing:.1em}header a{text-decoration:none;color:inherit}
+article{width:min(760px,calc(100% - 34px));margin:0 auto;padding:54px 0 80px}.kicker{font:700 10px "Courier New",monospace;text-transform:uppercase;letter-spacing:.13em;color:#8d432d}.kicker a{color:inherit;text-decoration:none}h1{margin:12px 0 20px;font:900 clamp(45px,9vw,82px)/.88 Arial Black,Arial,sans-serif;letter-spacing:-.055em;text-transform:uppercase}h2{margin:50px 0 13px;font:900 24px/1 Arial,sans-serif;letter-spacing:-.02em}p{font-size:18px;line-height:1.63;margin:0 0 20px}.dek{font-size:22px;line-height:1.42;color:#3e3b31}.note{font:12px/1.5 "Courier New",monospace;color:#615c4d;border-left:3px solid var(--shell);padding-left:12px}
+.figure{margin:38px 0 44px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:16px 0 18px}.figure h3{margin:0 0 8px;font:900 14px Arial,sans-serif;text-transform:uppercase}.optic{position:relative;height:330px;background:#17383b;overflow:hidden;touch-action:none}.optic svg{width:100%;height:100%;display:block}.control{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;margin-top:12px;font:10px "Courier New",monospace;text-transform:uppercase}.control input{width:100%;accent-color:#9d4a32}.caption{margin-top:10px;font:12px/1.5 "Courier New",monospace;color:#5b574a}
+.pull{margin:34px 0;padding:18px 0;border-top:3px double var(--ink);border-bottom:3px double var(--ink);font:700 21px/1.45 Georgia,serif}
+.sources{margin-top:52px;border-top:1px solid var(--ink);padding-top:16px}.sources h2{margin:0 0 12px;font-size:17px}.sources li{margin:8px 0;font-size:14px;line-height:1.45}
+@media(max-width:560px){article{padding-top:34px}.optic{height:280px}p{font-size:17px}.dek{font-size:20px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style></head>
+<body>
+<header><a href="../index.html">← archive</a> / field note 016 / 6 september 2026</header>
+<article>
+<div class="kicker"><a href="../games/2026-09-06/index.html">today's game: Mothlight</a></div>
+<h1>Scallop eyes use mirrors made of guanine crystals</h1>
+<p class="dek">A scallop has a lens in each eye, but the lens is not doing the job you expect. The main focusing surface is a concave mirror at the back, assembled from stacks of tiny crystals of guanine.</p>
+
+<p>There is a pleasingly wrong-looking photograph in almost any anatomical account of a scallop: a row of bright blue dots along the mantle, dozens of them, staring outward between the two shells. In <i>Pecten maximus</i>, the visual system can include as many as about 200 eyes. Michael Land worked out the optical trick in 1965. The lens did not have enough refractive power to focus an image on the retinas. The curved reflector behind the retinas did.</p>
+
+<p>That result made the eye stranger, not simpler. A mirror in living tissue has to be built from materials a cell can make and arrange. Land later described the reflector as a multilayer interference structure. Half a century later, cryogenic electron microscopy let Benjamin Palmer and colleagues look at the mirror without first drying away the organization they wanted to see.</p>
+
+<div class="figure">
+<h3>A simplified ray through one scallop eye</h3>
+<div class="optic">
+<svg id="eye" viewBox="0 0 700 330" role="img" aria-label="Simplified scallop eye showing incoming light, two retina layers and a concave mirror">
+<defs><pattern id="tiles" width="12" height="8" patternUnits="userSpaceOnUse"><rect width="10" height="6" x="1" y="1" fill="#d8e5d5" opacity=".86"/></pattern></defs>
+<path d="M116 42 Q48 165 116 288" fill="#557b78" stroke="#bcd0c8" stroke-width="4"/>
+<ellipse cx="177" cy="165" rx="52" ry="122" fill="#9dc8c5" opacity=".38" stroke="#d1e4dc" stroke-width="3"/>
+<path d="M513 62 Q631 165 513 268" fill="none" stroke="url(#tiles)" stroke-width="23"/>
+<path d="M468 86 Q550 165 468 244" fill="none" stroke="#d65f47" stroke-width="8" opacity=".9"/>
+<path d="M447 94 Q515 165 447 236" fill="none" stroke="#e5c268" stroke-width="8" opacity=".95"/>
+<g id="rays" stroke="#d7f0dd" stroke-width="2.5" fill="none"></g>
+<text x="52" y="310" fill="#d7dfcb" font-family="Courier New" font-size="12">CORNEA / LENS</text>
+<text x="430" y="38" fill="#efcf75" font-family="Courier New" font-size="12">TWO RETINAS</text>
+<text x="530" y="304" fill="#d7dfcb" font-family="Courier New" font-size="12">GUANINE MIRROR</text>
+</svg>
+</div>
+<div class="control"><span>incoming angle</span><input id="angle" type="range" min="-22" max="22" value="0" step="1" aria-label="Incoming light angle"><strong id="readout">0°</strong></div>
+<div class="caption">This is a geometry sketch, not an optical simulation. Move the angle to see why a curved reflector can send rays arriving from different directions toward different regions of the retina. The real eye also has a lens and three-dimensional, off-axis optics that this drawing leaves out.</div>
+</div>
+
+<h2>A mirror tiled with squares</h2>
+
+<p>The 2017 <i>Science</i> study found a reflector organized at several scales. Its working material is β-guanine. Instead of forming one continuous crystal surface, the mirror is built from a mosaic of square guanine plates stacked in layers. The layers are arranged so their reflective faces point toward the incoming light. Palmer and colleagues reported that this architecture reduces optical aberrations and that the multilayer spacing is suited to the wavelengths that penetrate the scallop's habitat.</p>
+
+<p>The square shape is chemically awkward. Guanine's crystal symmetry does not naturally demand square plates. Work published the same year by Anna Hirsch and colleagues showed that these tiles are composite crystals with twinned domains. The biological system gets a near-square optical tile out of a material whose ordinary crystallography would not hand it one for free.</p>
+
+<div class="pull">The useful comparison to a reflecting telescope is literal at one scale: both systems make an image with a segmented reflective surface. A scallop grows its segments inside cells.</div>
+
+<p>Recent work has pushed the construction problem further down. A 2023 <i>Nature Communications</i> paper examined the macromolecular sheets associated with biogenic guanine crystals. In scallop mirrors, each plate is held in a membrane-bound compartment, and the broad reflective crystal face is oriented toward incident light. That is a cell-biological problem as much as an optics problem: make a flat crystal, constrain its growth, orient it, tile it, then repeat the arrangement in layer after layer.</p>
+
+<h2>Two retinas, one reflected image</h2>
+
+<p>Scallop eyes also put two retinas in the path of the returned light. They are stacked rather than placed side by side. The 2017 reconstruction found that the mirror forms images on both, with the two retinal layers receiving different parts of the visual field. Older physiological work had already shown that the two retinas are functionally different: in <i>Pecten maximus</i>, one population responds to increases in illumination and the other to decreases.</p>
+
+<p>What a scallop experiences from this arrangement is harder to say. A mirror can be reconstructed; a retinal response can be recorded. Neither gives us a scallop's subjective scene. The optics alone are enough to make the animal's row of blue eyes less decorative than they first look.</p>
+
+<p class="note">One terminology wrinkle: guanine is famous as a nucleobase in DNA and RNA, but the mirror is not made of DNA. Cells can crystallize guanine itself and use the crystals as optical material.</p>
+
+<div class="sources">
+<h2>Sources</h2>
+<ul>
+<li>M. F. Land, <a href="https://doi.org/10.1113/jphysiol.1965.sp007653">"Image formation by a concave reflector in the eye of the scallop, <i>Pecten maximus</i>"</a>, <i>The Journal of Physiology</i> 179 (1965), 138–153.</li>
+<li>B. A. Palmer et al., <a href="https://doi.org/10.1126/science.aam9506">"The image-forming mirror in the eye of the scallop"</a>, <i>Science</i> 358 (2017), 1172–1175.</li>
+<li>A. Hirsch et al., <a href="https://doi.org/10.1002/anie.201704801">"Biologically Controlled Morphology and Twinning in Guanine Crystals"</a>, <i>Angewandte Chemie International Edition</i> 56 (2017), 9420–9424.</li>
+<li>B. A. Palmer et al., <a href="https://www.nature.com/articles/s41467-023-35894-6">"Macromolecular sheets direct the morphology and orientation of plate-like biogenic guanine crystals"</a>, <i>Nature Communications</i> 14 (2023).</li>
+</ul>
+</div>
+</article>
+<script>
+(()=>{"use strict";const slider=document.getElementById("angle"),out=document.getElementById("readout"),g=document.getElementById("rays");function draw(){const a=Number(slider.value),rad=a*Math.PI/180;out.textContent=(a>0?"+":"")+a+"°";g.innerHTML="";for(let i=-2;i<=2;i++){const sy=110+i*27,sx=7,hitX=515,hitY=165+i*23+a*2.2;const dx=Math.cos(rad),dy=Math.sin(rad),x1=120,y1=sy+(120-sx)*dy/dx;const focusX=458,focusY=165+i*7-a*2.6;const p=document.createElementNS("http://www.w3.org/2000/svg","path");p.setAttribute("d",`M ${sx} ${sy} L ${hitX} ${hitY} L ${focusX} ${focusY}`);g.appendChild(p)}}slider.addEventListener("input",draw);draw()})();
+</script>
+</body></html>
