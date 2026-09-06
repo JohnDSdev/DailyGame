@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Mothlight preview with moths moving between lanterns in a dark garden">
+<rect width="1200" height="675" fill="#17170f"/>
+<rect x="300" y="90" width="600" height="495" fill="#272517" stroke="#5b573d" stroke-width="5"/>
+<g stroke="#45482e" stroke-width="2" opacity=".8">
+<path d="M386 90v495M472 90v495M558 90v495M644 90v495M730 90v495M816 90v495"/>
+<path d="M300 161h600M300 232h600M300 303h600M300 374h600M300 445h600M300 516h600"/>
+</g>
+<g fill="#a97725" stroke="#edc45f" stroke-width="4">
+<circle cx="257" cy="47" r="24"/><circle cx="600" cy="47" r="24"/><circle cx="943" cy="47" r="24"/><circle cx="943" cy="337" r="24"/>
+<circle cx="943" cy="628" r="24"/><circle cx="600" cy="628" r="24"/><circle cx="257" cy="628" r="24"/><circle cx="257" cy="337" r="24"/>
+</g>
+<g fill="none" stroke-width="5">
+<circle cx="515" cy="267" r="28" stroke="#f0bd45"/><circle cx="687" cy="409" r="28" stroke="#9dcbd0" stroke-dasharray="9 8"/>
+<circle cx="773" cy="267" r="28" stroke="#f0bd45"/>
+</g>
+<g fill="#f0bd45">
+<path d="M687 232c-34-27-66-8-48 30 13 28 35 16 48 4 13 12 35 24 48-4 18-38-14-57-48-30z"/>
+<path d="M429 445c-34-27-66-8-48 30 13 28 35 16 48 4 13 12 35 24 48-4 18-38-14-57-48-30z"/>
+</g>
+<g fill="#9dcbd0">
+<path d="M601 338c-34-27-66-8-48 30 13 28 35 16 48 4 13 12 35 24 48-4 18-38-14-57-48-30z"/>
+</g>
+<g fill="#17170f" font-family="Courier New" font-weight="700" font-size="24" text-anchor="middle">
+<text x="687" y="255">1</text><text x="429" y="468">2</text><text x="601" y="361">3</text>
+</g>
+<text x="70" y="110" fill="#e8dfbe" font-family="Arial Black,Arial" font-weight="900" font-size="86" letter-spacing="-5">MOTHLIGHT</text>
+<text x="73" y="153" fill="#c8c09f" font-family="Courier New" font-size="22" letter-spacing="3">EVERY LANTERN MOVES THE WHOLE GARDEN</text>
+<path d="M276 73L409 207" stroke="#edc45f" stroke-width="4" stroke-dasharray="10 10" opacity=".75"/>
+</svg>
