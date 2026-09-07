@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-09-07",
+    title: "Ringfall",
+    type: "Rotary gate puzzle",
+    description: "Drag three concentric gate rings around a steel housing. Every notch can let numbered bearings fall inward immediately, so preload the rings and feed the center cup in exact order across eight hand-built mechanisms.",
+    accent: "#d64b32",
+    preview: "games/2026-09-07/preview.svg",
+    game: "games/2026-09-07/index.html",
+    article: "articles/2026-09-07.html",
+    articleTitle: "Why a spinning boiled egg stands up",
+    articleDescription: "A hard-boiled egg can rise onto one end while it spins. Sliding friction changes its orientation while rotational energy is dissipated, allowing the center of mass to climb even as total mechanical energy falls."
+  },
+  {
     date: "2026-09-06",
     title: "Mothlight",
     type: "Simultaneous flock puzzle",

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#eee7d3">
+<title>Why a spinning boiled egg stands up | Daily Game</title>
+<style>
+:root{--paper:#eee7d3;--ink:#171713;--red:#9f3e2e;--blue:#315e67;--line:#9a917a}
+*{box-sizing:border-box}html{background:#d8d0bb}body{margin:0;color:var(--ink);background:var(--paper);font-family:Georgia,"Times New Roman",serif}a{color:#204e58;text-underline-offset:3px}
+header{border-bottom:1px solid var(--ink);padding:14px max(18px,calc((100vw - 760px)/2));font:10px "Courier New",monospace;text-transform:uppercase;letter-spacing:.1em}header a{text-decoration:none;color:inherit}
+article{width:min(760px,calc(100% - 34px));margin:0 auto;padding:54px 0 80px}.kicker{font:700 10px "Courier New",monospace;text-transform:uppercase;letter-spacing:.13em;color:var(--red)}.kicker a{color:inherit;text-decoration:none}
+h1{margin:12px 0 20px;font:900 clamp(46px,9vw,84px)/.88 Arial Black,Arial,sans-serif;letter-spacing:-.055em;text-transform:uppercase}h2{margin:50px 0 13px;font:900 24px/1 Arial,sans-serif;letter-spacing:-.02em}
+p{font-size:18px;line-height:1.63;margin:0 0 20px}.dek{font-size:22px;line-height:1.42;color:#3e3b31}.note{font:12px/1.5 "Courier New",monospace;color:#615c4d;border-left:3px solid var(--red);padding-left:12px}
+.figure{margin:38px 0 44px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:16px 0 18px}.figure h3{margin:0 0 8px;font:900 14px Arial,sans-serif;text-transform:uppercase}
+.demo{height:330px;background:#262824;overflow:hidden}.demo svg{width:100%;height:100%;display:block}
+.control{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;margin-top:12px;font:10px "Courier New",monospace;text-transform:uppercase}.control input{width:100%;accent-color:var(--red)}.caption{margin-top:10px;font:12px/1.5 "Courier New",monospace;color:#5b574a}
+.pull{margin:34px 0;padding:18px 0;border-top:3px double var(--ink);border-bottom:3px double var(--ink);font:700 21px/1.45 Georgia,serif}
+.sources{margin-top:52px;border-top:1px solid var(--ink);padding-top:16px}.sources h2{margin:0 0 12px;font-size:17px}.sources li{margin:8px 0;font-size:14px;line-height:1.45}
+@media(max-width:560px){article{padding-top:34px}.demo{height:280px}p{font-size:17px}.dek{font-size:20px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style></head>
+<body>
+<header><a href="../index.html">← archive</a> / field note 017 / 7 september 2026</header>
+<article>
+<div class="kicker"><a href="../games/2026-09-07/index.html">today's game: Ringfall</a></div>
+<h1>Why a spinning boiled egg stands up</h1>
+<p class="dek">Spin a hard-boiled egg fast enough on its side and it can climb toward one end. Its center of mass rises while the egg is losing mechanical energy. That sounds backwards until friction enters the picture.</p>
+
+<p>The tabletop trick is old; the compact mathematical explanation is much newer. In 2002, Keith Moffatt and Yutaka Shimomura treated the egg as a rapidly spinning body of revolution with a moving contact point. Their result in <i>Nature</i> described the rise of the symmetry axis from nearly horizontal toward vertical. The odd part is visible before any equations appear: standing the egg higher raises its gravitational potential energy.</p>
+
+<p>There is no missing energy source. The egg begins with rotational kinetic energy. As the shell slips against the table, friction dissipates some of that energy, but the frictional force also changes the egg's motion and orientation. In the regime Moffatt and Shimomura analyzed, the slow change of tilt can carry the center of mass upward even while total mechanical energy falls.</p>
+
+<div class="figure">
+<h3>How much higher is the center?</h3>
+<div class="demo">
+<svg viewBox="0 0 700 330" role="img" aria-label="A prolate spheroid tilting from horizontal toward vertical above a table">
+<line x1="55" y1="270" x2="645" y2="270" stroke="#c9c2ad" stroke-width="3"/>
+<g id="eggGroup"><ellipse id="egg" cx="350" cy="0" rx="124" ry="88" fill="#e4d5ae" stroke="#8c7551" stroke-width="4"/><line x1="226" y1="0" x2="474" y2="0" stroke="#9f3e2e" stroke-width="3" stroke-dasharray="8 6"/></g>
+<line id="heightLine" x1="545" y1="270" x2="545" y2="182" stroke="#7eb3b8" stroke-width="3"/>
+<path id="heightCap" d="M535 182H555" stroke="#7eb3b8" stroke-width="3"/>
+<text x="70" y="303" fill="#d6d0bf" font-family="Courier New" font-size="12">TABLE</text>
+<text id="hText" x="566" y="220" fill="#9bc7ca" font-family="Courier New" font-size="13">h = 1.00</text>
+</svg>
+</div>
+<div class="control"><span>axis tilt</span><input id="tilt" type="range" min="0" max="90" value="0" step="1" aria-label="Egg axis tilt above horizontal"><strong id="readout">0°</strong></div>
+<div class="caption">Geometry only. The drawing models the egg as a prolate spheroid with long-to-short semi-axis ratio 1.4. For that assumed shape, the support height is h = √(a² sin²α + b² cos²α). The real dynamics that change α involve spin, slip, friction and the egg's mass distribution.</div>
+</div>
+
+<h2>The contact point has to slip</h2>
+
+<p>A perfectly rolling rigid body and a slipping egg are different problems. The 2002 treatment relies on weak friction at a moving point of contact. Cambridge's account of the work puts it plainly: the cooked egg slips a little, friction acts between shell and table, and part of the original spin energy is spent while the egg rises. The surface cannot be irrelevant, because that force is what couples the fast spin to the slow change in tilt.</p>
+
+<p>The mathematics uses a high-spin approximation. Moffatt and Shimomura found an approximately conserved quantity related to Jellett's classical invariant, then reduced the slow tilt to a first-order differential equation. You do not need that machinery to settle the energy question. If the center rises by a height Δh, its gravitational potential increases by mgΔh. The rotational energy can decrease by more than that amount, with friction taking the rest as heat.</p>
+
+<div class="pull">Dissipation does not force every coordinate downhill. It forces total mechanical energy downhill. The egg can trade a larger loss of spin energy for a smaller gain in height.</div>
+
+<h2>Why the raw egg behaves differently</h2>
+
+<p>A raw egg is not one rigid body. Its shell can begin rotating while the liquid interior lags, shears and dissipates energy internally. Moffatt and Shimomura explicitly contrasted the raw egg with the hard-boiled one: under the same kind of spin, the raw egg does not make the same rise. Cambridge's summary attributes that failure to energy being absorbed and dissipated in the liquid interior before the rigid-body-like gyroscopic motion can lift the egg.</p>
+
+<p>That gives you a second kitchen test besides the familiar stop-and-release trick. A hard-boiled egg spins smoothly and may rise if launched fast enough on a suitable surface. A raw one tends to wobble and lose the useful spin much sooner. The exact motion depends on shape, spin rate and surface, so a single disappointing egg is not a precision instrument.</p>
+
+<h2>At high speed, the egg can briefly leave the table</h2>
+
+<p>The rise is not always perfectly smooth. A later prediction was that oscillations during the rising motion could become large enough for contact with the table to vanish for an instant. Tetsuhiro Mitsui and colleagues tested that in 2006 with a metal egg-shaped body on polished copper. They detected loss of contact optically, acoustically and electrically, and also recorded a hard-boiled egg leaving the surface in high-speed video.</p>
+
+<p>The effect is tiny. The paper is useful because it turns a kitchen curiosity into a contact-mechanics experiment: the same system has spin, sliding friction, changing orientation, small oscillations and occasional impacts. That is more structure than the standard "boiled eggs spin better" demonstration suggests.</p>
+
+<p class="note">The interactive above does not simulate the 2002 differential equation. It only shows the geometric fact at the center of the apparent paradox: for an elongated body, moving the long axis toward vertical raises the center of mass.</p>
+
+<div class="sources">
+<h2>Sources</h2>
+<ul>
+<li>H. K. Moffatt and Y. Shimomura, <a href="https://doi.org/10.1038/416385a">"Spinning eggs: a paradox resolved"</a>, <i>Nature</i> 416 (2002), 385–386.</li>
+<li>University of Cambridge, <a href="https://www.cam.ac.uk/news/cracked-it">"Cracked it!"</a>, 28 March 2002, a contemporary summary of the Moffatt-Shimomura result and the raw-versus-boiled comparison.</li>
+<li>T. Mitsui et al., <a href="https://doi.org/10.1098/rspa.2006.1718">"Can a spinning egg really jump?"</a>, <i>Proceedings of the Royal Society A</i> 462 (2006), 2897–2905.</li>
+</ul>
+</div>
+</article>
+<script>
+(()=>{"use strict";const s=document.getElementById("tilt"),out=document.getElementById("readout"),g=document.getElementById("eggGroup"),line=document.getElementById("heightLine"),cap=document.getElementById("heightCap"),txt=document.getElementById("hText");
+function draw(){const deg=Number(s.value),a=1.4,b=1,rad=deg*Math.PI/180,h=Math.sqrt(a*a*Math.sin(rad)**2+b*b*Math.cos(rad)**2),px=88*h,cy=270-px;out.textContent=deg+"°";g.setAttribute("transform",`translate(0 ${cy}) rotate(${-deg} 350 0)`);line.setAttribute("y2",cy);cap.setAttribute("d",`M535 ${cy}H555`);txt.setAttribute("y",Math.max(48,cy+8));txt.textContent=`h = ${h.toFixed(2)} × short radius`}
+s.addEventListener("input",draw);draw()})();
+</script>
+</body></html>

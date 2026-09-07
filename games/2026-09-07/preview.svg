@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<rect width="800" height="500" fill="#151515"/>
+<circle cx="400" cy="255" r="204" fill="#242421" stroke="#5d5a51" stroke-width="5"/>
+<g stroke="#3a3935" stroke-width="2">
+<path d="M400 44V466"/><path d="M189 255H611"/><path d="M251 106L549 404"/><path d="M549 106L251 404"/>
+</g>
+<g fill="none" stroke="#aaa496">
+<circle cx="400" cy="255" r="68" stroke-width="26"/><circle cx="400" cy="255" r="118" stroke-width="28"/><circle cx="400" cy="255" r="168" stroke-width="30"/>
+</g>
+<g fill="none" stroke="#252522" stroke-width="10" stroke-dasharray="3 10">
+<circle cx="400" cy="255" r="68"/><circle cx="400" cy="255" r="118"/><circle cx="400" cy="255" r="168"/>
+</g>
+<g fill="#d64b32">
+<rect x="385" y="174" width="30" height="38"/><rect x="500" y="240" width="38" height="30"/><rect x="385" y="72" width="30" height="42"/>
+</g>
+<circle cx="400" cy="255" r="33" fill="#0c0c0c" stroke="#d0a44e" stroke-width="3"/>
+<g font-family="Arial" font-weight="900" font-size="24" text-anchor="middle" dominant-baseline="central">
+<g><circle cx="318" cy="171" r="24" fill="#e1ddd3"/><text x="318" y="172" fill="#151515">1</text></g>
+<g><circle cx="519" cy="136" r="24" fill="#e1ddd3"/><text x="519" y="137" fill="#151515">2</text></g>
+<g><circle cx="400" cy="373" r="24" fill="#e1ddd3"/><text x="400" y="374" fill="#151515">3</text></g>
+</g>
+<text x="38" y="60" fill="#eee8d7" font-family="Arial Black,Arial" font-size="58" font-weight="900" letter-spacing="-4">RINGFALL</text>
+<text x="42" y="92" fill="#d0a44e" font-family="Courier New" font-size="14" font-weight="700">INDEX THE GATES. DROP 1 → 2 → 3.</text>
+</svg>
