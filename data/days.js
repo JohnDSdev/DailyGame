@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-09-08",
+    title: "Lockwater",
+    type: "Lock equalization puzzle",
+    description: "Swipe water from one canal chamber into the next, conserving every unit. When the boat's neighboring chambers reach the same level, tap the gate and sail through eight hand-built lock flights with exact minimum-transfer pars.",
+    accent: "#a34d31",
+    preview: "games/2026-09-08/preview.svg",
+    game: "games/2026-09-08/index.html",
+    article: "articles/2026-09-08.html",
+    articleTitle: "A hot sawtooth can propel a water drop",
+    articleDescription: "Leidenfrost drops levitate on their own vapor. Put asymmetric ratchet teeth underneath and that escaping vapor can be rectified into a directional force that propels the drop."
+  },
+  {
     date: "2026-09-07",
     title: "Ringfall",
     type: "Rotary gate puzzle",
