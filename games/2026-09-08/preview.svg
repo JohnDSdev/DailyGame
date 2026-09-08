@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="t d">
+<title id="t">Lockwater</title><desc id="d">Cutaway canal lock chambers with stepped water, masonry gates and a rust-red boat.</desc>
+<rect width="1200" height="675" fill="#c9c0a5"/>
+<path d="M0 105H1200M0 570H1200" stroke="#20241f" stroke-width="6"/>
+<g fill="#b4aa8e" stroke="#20241f" stroke-width="5">
+<rect x="65" y="170" width="265" height="400"/><rect x="330" y="170" width="265" height="400"/><rect x="595" y="170" width="265" height="400"/><rect x="860" y="170" width="275" height="400"/>
+</g>
+<g fill="#4c8792"><rect x="69" y="345" width="257" height="221"/><rect x="334" y="245" width="257" height="321"/><rect x="599" y="245" width="257" height="321"/><rect x="864" y="395" width="267" height="171"/></g>
+<g fill="#315f68"><rect x="69" y="345" width="257" height="10"/><rect x="334" y="245" width="257" height="10"/><rect x="599" y="245" width="257" height="10"/><rect x="864" y="395" width="267" height="10"/></g>
+<g fill="#5d5a4d"><rect x="320" y="145" width="20" height="425"/><rect x="585" y="145" width="20" height="425"/><rect x="850" y="145" width="20" height="425"/></g>
+<g fill="#a34d31"><path d="M150 315h120l-22 38h-76z"/><rect x="205" y="279" width="10" height="36"/></g>
+<g fill="#20241f" font-family="Arial Black,Arial,sans-serif" font-weight="900"><text x="62" y="90" font-size="82" letter-spacing="-5">LOCKWATER</text><text x="895" y="92" font-family="Courier New,monospace" font-size="24">18 / 08 SEP</text></g>
+<g stroke="#a34d31" stroke-width="10" fill="none" stroke-linecap="square"><path d="M428 205h110"/><path d="M518 185l20 20-20 20"/><path d="M757 205H647"/><path d="M667 185l-20 20 20 20"/></g>
+<g fill="#20241f" font-family="Courier New,monospace" font-size="24" font-weight="700"><text x="150" y="530">2</text><text x="415" y="530">4</text><text x="680" y="530">4</text><text x="945" y="530">1</text><text x="65" y="625">MOVE WATER. MATCH LEVELS. PASS THE GATES.</text></g>
+</svg>
