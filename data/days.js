@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-09-09",
+    title: "Wireline",
+    type: "One-finger winch control",
+    description: "Turn a large deck winch with circular touch gestures while the survey vessel keeps moving. Pay cable out and reel it in to carry an orange sampling probe through every numbered water-column ring across eight increasingly strong-current stations.",
+    accent: "#d1a347",
+    preview: "games/2026-09-09/preview.svg",
+    game: "games/2026-09-09/index.html",
+    article: "articles/2026-09-09.html",
+    articleTitle: "Bumblebees can feel a flower's electric field with their hairs",
+    articleDescription: "Bumblebees can learn floral electric cues, and experiments show that weak electric fields mechanically deflect their sensory hairs strongly enough to produce neural responses."
+  },
+  {
     date: "2026-09-08",
     title: "Lockwater",
     type: "Lock equalization puzzle",
