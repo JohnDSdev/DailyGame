@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-09-10",
+    title: "Ground Glass",
+    type: "Manual camera focus",
+    description: "Work a plate camera by dragging the brass front standard along its rail, choosing an iris stop, and exposing only when the doubled ground-glass image, depth of field, and subject motion all agree across eight studio assignments.",
+    accent: "#b78b45",
+    preview: "games/2026-09-10/preview.svg",
+    game: "games/2026-09-10/index.html",
+    article: "articles/2026-09-10.html",
+    articleTitle: "A Venus flytrap remembers the first touch",
+    articleDescription: "A trigger-hair touch leaves electrical and calcium signals behind. A second signal arriving before that calcium fades can push the trap across its closure threshold, while later action potentials help control digestion."
+  },
+  {
     date: "2026-09-09",
     title: "Wireline",
     type: "One-finger winch control",
