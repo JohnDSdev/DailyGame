@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="theme-color" content="#17130f"><title>Ground Glass | Daily Game</title>
+<style>
+:root{--ink:#17130f;--paper:#d8c9a9;--cream:#eee3c7;--brass:#b78b45;--red:#9b2f26;--green:#60705c;--black:#0c0b09}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--black);color:var(--cream);font-family:Georgia,serif}
+button,a{font:inherit;color:inherit}button{border:0}a{text-decoration:none}
+body{display:grid;grid-template-rows:40px minmax(0,1fr) 154px;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
+header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 9px;background:#17130f;border-bottom:1px solid #665942;font:9px/1 "Courier New",monospace;letter-spacing:.12em;text-transform:uppercase}
+header a{opacity:.75}.title{font-weight:900;color:var(--brass);letter-spacing:.18em}.tools{justify-self:end;display:flex}.tools button{background:none;padding:10px 6px;text-transform:uppercase;cursor:pointer}
+main{position:relative;min-height:0;background:#29241c}.stage{position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,1fr) 82px}
+canvas{width:100%;height:100%;display:block;touch-action:none;background:#2b261e}
+.apertures{border-left:1px solid #6d5e43;background:#16130f;padding:8px 7px;display:grid;grid-template-rows:auto repeat(5,1fr);gap:5px;touch-action:manipulation}
+.apertures small{font:8px/1.2 "Courier New",monospace;text-align:center;text-transform:uppercase;letter-spacing:.08em;color:#baa987}
+.apertures button{background:#262019;border:1px solid #6e6049;color:#d4c7aa;min-height:38px;cursor:pointer;font:700 13px "Courier New",monospace}
+.apertures button.active{background:var(--brass);color:#17130f;border-color:#ddbd7a}
+.hud{position:absolute;left:8px;right:90px;top:8px;display:flex;justify-content:space-between;pointer-events:none;font:8px/1.25 "Courier New",monospace;text-transform:uppercase;letter-spacing:.06em;text-shadow:0 1px #000}
+.hud strong{display:block;margin-top:2px;font-size:12px;color:#fff}.hud .r{text-align:right}
+footer{display:grid;grid-template-columns:minmax(0,1fr) 126px;gap:8px;align-items:center;padding:8px 9px;border-top:1px solid #665942;background:#17130f}
+.copy{font:8px/1.42 "Courier New",monospace;text-transform:uppercase;letter-spacing:.03em;color:#cbbd9f}.copy b{color:var(--brass)}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:5px}.actions button{min-height:41px;border:1px solid #75664d;background:#211c16;text-transform:uppercase;font:900 9px "Courier New",monospace;cursor:pointer}.actions #shutter{grid-column:1/-1;background:var(--red);border-color:#c55b4e;color:#fff;font-size:11px}.actions .go{background:var(--brass);color:#17130f;border-color:var(--brass)}.actions button[hidden]{display:none}
+.overlay{position:fixed;inset:0;z-index:20;background:#17130f;color:#eee3c7;padding:clamp(22px,7vw,70px);display:flex;flex-direction:column;justify-content:center;overflow:auto;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 7px)}
+.overlay.hidden{display:none}.overlay small{font:700 10px "Courier New",monospace;text-transform:uppercase;letter-spacing:.13em;color:var(--brass)}
+.overlay h1{margin:8px 0 18px;font:900 clamp(48px,16vw,132px)/.78 Georgia,serif;letter-spacing:-.06em;text-transform:uppercase}
+.overlay p{max-width:730px;margin:0 0 18px;font:17px/1.48 Georgia,serif}
+.primary{width:max-content;background:var(--brass);color:#17130f;padding:14px 18px;font:900 11px "Courier New",monospace;text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
+.levels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #75664d;border-left:1px solid #75664d;margin-top:14px}
+.levels button{min-height:70px;text-align:left;background:#211c16;border-right:1px solid #75664d;border-bottom:1px solid #75664d;padding:8px;cursor:pointer}.levels button:disabled{opacity:.28}.levels strong{display:block;font-size:18px;color:var(--brass)}.levels span{display:block;margin-top:4px;font:8px/1.2 "Courier New",monospace;text-transform:uppercase}
+.help{margin-top:12px;font:9px/1.45 "Courier New",monospace;color:#baa987;text-transform:uppercase;max-width:720px}
+.flash{position:absolute;inset:0 82px 0 0;background:#fff;opacity:0;pointer-events:none}.flash.on{animation:flash .18s linear}@keyframes flash{0%{opacity:.9}100%{opacity:0}}
+@media(max-width:600px){body{grid-template-rows:38px minmax(0,1fr) 168px}.stage{grid-template-columns:minmax(0,1fr) 72px}.hud{right:80px}.apertures{padding:7px 5px}.apertures button{min-height:36px;font-size:11px}footer{grid-template-columns:minmax(0,1fr) 112px}.copy{font-size:7.5px}.overlay{justify-content:flex-end;padding-bottom:calc(24px + env(safe-area-inset-bottom))}.levels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.flash.on{opacity:.12}}
+</style></head><body>
+<header><a href="../../index.html">← archive</a><div class="title">Ground Glass</div><div class="tools"><button id="sound">sound on</button><button id="jobs">jobs</button></div></header>
+<main id="main"><div class="stage"><canvas id="board" aria-label="Ground Glass manual camera focus game"></canvas><div class="apertures"><small>iris<br>stop</small><button data-f="2.8">f/2.8</button><button data-f="4">f/4</button><button data-f="5.6">f/5.6</button><button data-f="8">f/8</button><button data-f="11">f/11</button></div></div><div class="hud"><div>assignment<strong id="jobName">01 / portrait</strong></div><div class="r">plates / good / best<strong><span id="plates">4</span> / <span id="good">0/2</span> / <span id="best">—</span></strong></div></div><div id="flash" class="flash"></div></main>
+<footer><div class="copy"><b>drag the brass camera standard along the rail.</b> merge the doubled image on the ground glass. smaller iris stops forgive more depth, but their longer exposure blurs moving subjects. tap the red shutter when the plate is worth taking.</div><div class="actions"><button id="restart">restart</button><button id="next" class="go" hidden>next job</button><button id="shutter">make plate</button></div></footer>
+<section id="intro" class="overlay"><small>Daily Game 020 / manual camera focus</small><h1>Ground<br>Glass</h1><p>A portrait studio with no autofocus and expensive plates. Slide the front standard until the split image comes together, choose an iris stop, and expose only when depth of field and subject motion agree.</p><button id="start" class="primary">remove the dark slide</button><div class="help">touch: drag the brass standard • tap an iris stop • red button exposes • keyboard: ←/→ focus, ↑/↓ iris, space shutter</div></section>
+<section id="picker" class="overlay hidden"><small>cleared assignments stay unlocked</small><h1 style="font-size:clamp(42px,10vw,82px)">Plate book</h1><div id="levelList" class="levels"></div><button id="close" class="primary" style="margin-top:16px">close</button></section>
+<script>
+(()=>{"use strict";
+const $=s=>document.querySelector(s), canvas=$("#board"), ctx=canvas.getContext("2d"), main=$("#main"), reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const F=[2.8,4,5.6,8,11];
+const LEVELS=[
+{name:"single sitter",base:3.1,amp:.35,freq:.52,spread:.10,shots:2,plates:4},
+{name:"restless child",base:2.7,amp:.62,freq:.84,spread:.10,shots:2,plates:4},
+{name:"two sisters",base:3.4,amp:.40,freq:.58,spread:.34,shots:3,plates:5},
+{name:"violinist",base:4.0,amp:.82,freq:.93,spread:.20,shots:3,plates:5},
+{name:"family row",base:4.6,amp:.45,freq:.63,spread:.52,shots:3,plates:5},
+{name:"workshop hand",base:2.25,amp:.72,freq:1.04,spread:.24,shots:4,plates:6},
+{name:"porch group",base:5.2,amp:.74,freq:.76,spread:.66,shots:4,plates:6},
+{name:"station crowd",base:5.8,amp:1.18,freq:.96,spread:.58,shots:5,plates:7}
+];
+let W=0,H=0,dpr=1,level=0,L=LEVELS[0],started=false,won=false,failed=false,focus=3,fi=2,plates=4,good=0,t=0,last=0,raf=0,drag=false,shotMark=0;
+let unlocked=Math.min(LEVELS.length,Number(localStorage.getItem("groundGlassUnlocked")||1)),bests=JSON.parse(localStorage.getItem("groundGlassBests")||"{}"),soundOn=localStorage.getItem("groundGlassSound")!=="off",audio=null;
+function tone(f,d=.07,g=.018,type="triangle"){if(!soundOn)return;try{audio=audio||new(AudioContext||webkitAudioContext)();const o=audio.createOscillator(),v=audio.createGain();o.type=type;o.frequency.value=f;v.gain.setValueAtTime(g,audio.currentTime);v.gain.exponentialRampToValueAtTime(.0001,audio.currentTime+d);o.connect(v);v.connect(audio.destination);o.start();o.stop(audio.currentTime+d)}catch(e){}}
+function buzz(v){if(navigator.vibrate)navigator.vibrate(v)}
+function fit(){const r=canvas.getBoundingClientRect();W=r.width;H=r.height;dpr=Math.min(2,devicePixelRatio||1);canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw()}
+function subject(){const d=L.base+L.amp*Math.sin(L.freq*t),v=L.amp*L.freq*Math.cos(L.freq*t);return{d,v,near:d-L.spread/2,far:d+L.spread/2}}
+function dof(f,d){return .095*(f/2.8)*Math.pow(Math.max(1.2,d)/3,1.08)}
+function exposure(f){return .022*Math.pow(f/2.8,2)}
+function evalShot(){const s=subject(),f=F[fi],tol=dof(f,s.d),err=Math.max(Math.abs(focus-s.near),Math.abs(focus-s.far)),blur=Math.abs(s.v)*exposure(f),ok=err<=tol&&blur<=.075;return{...s,f,tol,err,blur,ok}}
+function focusX(d){return 28+(Math.max(1.2,Math.min(8.5,d))-1.2)/(8.5-1.2)*(W-56)}
+function xFocus(x){return 1.2+Math.max(0,Math.min(1,(x-28)/(W-56)))*(8.5-1.2)}
+function load(i=level){cancelAnimationFrame(raf);level=i;L=LEVELS[i];focus=L.base;fi=2;plates=L.plates;good=0;t=0;won=false;failed=false;started=true;last=performance.now();shotMark=0;$("#jobName").textContent=`${String(i+1).padStart(2,"0")} / ${L.name}`;$("#plates").textContent=plates;$("#good").textContent=`0/${L.shots}`;$("#best").textContent=bests[i]??"—";$("#next").hidden=true;setIris();raf=requestAnimationFrame(loop)}
+function loop(now){const dt=Math.min(.04,(now-last)/1000);last=now;if(started&&!won&&!failed)t+=dt;shotMark=Math.max(0,shotMark-dt);draw();if(started&&!won&&!failed)raf=requestAnimationFrame(loop)}
+function shutter(){if(!started||won||failed||plates<=0)return;const e=evalShot();plates--;$("#plates").textContent=plates;$("#flash").classList.remove("on");void $("#flash").offsetWidth;$("#flash").classList.add("on");tone(e.ok?430:96,e.ok?.09:.15,e.ok?.024:.018,e.ok?"sine":"square");buzz(e.ok?8:[14,24,14]);shotMark=e.ok?1:-1;if(e.ok){good++;$("#good").textContent=`${good}/${L.shots}`;if(good>=L.shots){win();return}}if(plates<=0)lose()}
+function win(){won=true;cancelAnimationFrame(raf);const used=L.plates-plates,old=bests[level];if(old==null||used<old){bests[level]=used;localStorage.setItem("groundGlassBests",JSON.stringify(bests));$("#best").textContent=used}if(level===unlocked-1&&unlocked<LEVELS.length){unlocked++;localStorage.setItem("groundGlassUnlocked",String(unlocked));renderPicker()}$("#next").hidden=false;$("#next").textContent=level<LEVELS.length-1?"next job":"plate book";tone(392,.1,.022);setTimeout(()=>tone(523,.16,.018),90)}
+function lose(){failed=true;cancelAnimationFrame(raf);tone(78,.2,.02,"sawtooth");buzz([20,35,20])}
+function setIris(){document.querySelectorAll("[data-f]").forEach((b,i)=>b.classList.toggle("active",i===fi))}
+function draw(){ctx.clearRect(0,0,W,H);const s=subject(),e=evalShot(),gx=Math.max(20,W*.08),gy=Math.max(48,H*.15),gw=W-gx*2,gh=Math.max(110,H*.48);
+ctx.fillStyle="#211c16";ctx.fillRect(0,0,W,H);
+ctx.fillStyle="#0b0907";ctx.fillRect(gx-10,gy-10,gw+20,gh+20);ctx.strokeStyle="#b78b45";ctx.lineWidth=2;ctx.strokeRect(gx-10,gy-10,gw+20,gh+20);
+const grad=ctx.createLinearGradient(0,gy,0,gy+gh);grad.addColorStop(0,"#afa47f");grad.addColorStop(1,"#6f715f");ctx.fillStyle=grad;ctx.fillRect(gx,gy,gw,gh);
+ctx.globalAlpha=.12;ctx.strokeStyle="#17130f";ctx.lineWidth=1;for(let y=gy+5;y<gy+gh;y+=7){ctx.beginPath();ctx.moveTo(gx,y);ctx.lineTo(gx+gw,y);ctx.stroke()}ctx.globalAlpha=1;
+const cx=gx+gw*.5, floor=gy+gh*.84, scale=Math.max(30,Math.min(72,260/s.d)),ghost=Math.min(34,Math.abs(focus-s.d)*20);
+function sitter(off,alpha){ctx.save();ctx.globalAlpha=alpha;ctx.fillStyle="#1a1916";ctx.beginPath();ctx.arc(cx+off,floor-scale*1.55,scale*.23,0,Math.PI*2);ctx.fill();ctx.fillRect(cx-scale*.26+off,floor-scale*1.34,scale*.52,scale*.74);ctx.beginPath();ctx.moveTo(cx-scale*.26+off,floor-scale*.65);ctx.lineTo(cx-scale*.48+off,floor);ctx.lineTo(cx+scale*.48+off,floor);ctx.lineTo(cx+scale*.26+off,floor-scale*.65);ctx.closePath();ctx.fill();ctx.restore()}
+sitter(-ghost,.42);sitter(ghost,.42);sitter(0,Math.max(.18,1-Math.min(1,ghost/25)));
+ctx.fillStyle="#ece1c4";ctx.font="700 9px Courier New";ctx.textAlign="left";ctx.fillText(`GROUND GLASS  ${e.f.toFixed(e.f%1?1:0)}  AUTO ${Math.round(exposure(e.f)*1000)}ms`,gx+7,gy+14);
+ctx.fillStyle=e.err<=e.tol?"#d5c78d":"#b4523e";ctx.fillRect(gx+7,gy+gh-17,Math.min(gw-14,(e.tol/Math.max(.001,e.err))*gw*.45),5);
+ctx.fillStyle=e.blur<=.075?"#d5c78d":"#b4523e";ctx.fillRect(gx+7+gw*.5,gy+gh-17,Math.min(gw*.45,(.075/Math.max(.001,e.blur))*gw*.45),5);
+ctx.fillStyle="#e7d6b5";ctx.font="8px Courier New";ctx.fillText("DEPTH",gx+7,gy+gh-22);ctx.fillText("MOTION",gx+7+gw*.5,gy+gh-22);
+const railY=H-50;ctx.strokeStyle="#6f6047";ctx.lineWidth=8;ctx.beginPath();ctx.moveTo(28,railY);ctx.lineTo(W-28,railY);ctx.stroke();ctx.strokeStyle="#c29a55";ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(28,railY-5);ctx.lineTo(W-28,railY-5);ctx.stroke();
+for(let d=2;d<=8;d++){const x=focusX(d);ctx.strokeStyle="#8f7a59";ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,railY+7);ctx.lineTo(x,railY+15);ctx.stroke();ctx.fillStyle="#bcae90";ctx.font="7px Courier New";ctx.textAlign="center";ctx.fillText(d+"m",x,railY+24)}
+const fx=focusX(focus);ctx.fillStyle="#1b1712";ctx.fillRect(fx-22,railY-31,44,34);ctx.strokeStyle="#b78b45";ctx.lineWidth=3;ctx.strokeRect(fx-22,railY-31,44,34);ctx.fillStyle="#b78b45";ctx.fillRect(fx-7,railY-38,14,9);ctx.fillStyle="#e9dcc0";ctx.font="700 8px Courier New";ctx.fillText(focus.toFixed(2)+"m",fx,railY-13);
+if(shotMark){ctx.fillStyle=shotMark>0?"#d5c78d":"#b4523e";ctx.font="900 15px Courier New";ctx.textAlign="center";ctx.fillText(shotMark>0?"PLATE KEPT":"PLATE SPOILED",W/2,gy+gh+28)}
+if(won||failed){ctx.fillStyle="rgba(12,11,9,.82)";ctx.fillRect(gx,gy+gh*.35,gw,58);ctx.fillStyle=won?"#d5c78d":"#d06a57";ctx.font="900 18px Georgia";ctx.textAlign="center";ctx.fillText(won?"ASSIGNMENT COMPLETE":"OUT OF PLATES",W/2,gy+gh*.35+25);ctx.fillStyle="#e8ddc4";ctx.font="8px Courier New";ctx.fillText(won?"the usable negatives are in the rack":"restart and expose more carefully",W/2,gy+gh*.35+43)}
+}
+canvas.addEventListener("pointerdown",e=>{if(!started||won||failed)return;const r=canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;if(y>H-92){drag=true;canvas.setPointerCapture(e.pointerId);focus=xFocus(x);tone(145,.02,.004,"square")}});
+canvas.addEventListener("pointermove",e=>{if(!drag)return;const r=canvas.getBoundingClientRect();focus=xFocus(e.clientX-r.left)});
+canvas.addEventListener("pointerup",()=>drag=false);canvas.addEventListener("pointercancel",()=>drag=false);
+document.querySelectorAll("[data-f]").forEach((b,i)=>b.onclick=()=>{if(!started||won||failed)return;fi=i;setIris();tone(180+i*28,.04,.008,"square")});
+$("#shutter").onclick=shutter;$("#restart").onclick=()=>load(level);$("#start").onclick=()=>{$("#intro").classList.add("hidden");load(0)};$("#jobs").onclick=()=>{$("#picker").classList.remove("hidden");renderPicker()};$("#close").onclick=()=>$("#picker").classList.add("hidden");$("#next").onclick=()=>{if(level<LEVELS.length-1)load(level+1);else{$("#picker").classList.remove("hidden");renderPicker()}};
+$("#sound").onclick=()=>{soundOn=!soundOn;localStorage.setItem("groundGlassSound",soundOn?"on":"off");$("#sound").textContent=soundOn?"sound on":"sound off";if(soundOn)tone(220,.05,.01)};
+function renderPicker(){const el=$("#levelList");el.innerHTML="";LEVELS.forEach((l,i)=>{const b=document.createElement("button");b.disabled=i>=unlocked;b.innerHTML=`<strong>${String(i+1).padStart(2,"0")}</strong><span>${l.name}<br>best ${bests[i]??"—"} plates</span>`;b.onclick=()=>{$("#picker").classList.add("hidden");load(i)};el.appendChild(b)})}
+addEventListener("keydown",e=>{if(e.key===" "){e.preventDefault();shutter()}else if(e.key==="ArrowLeft"){focus=Math.max(1.2,focus-.05)}else if(e.key==="ArrowRight"){focus=Math.min(8.5,focus+.05)}else if(e.key==="ArrowUp"){fi=Math.max(0,fi-1);setIris()}else if(e.key==="ArrowDown"){fi=Math.min(F.length-1,fi+1);setIris()}else if(e.key.toLowerCase()==="r")load(level)});
+addEventListener("resize",fit);screen.orientation?.addEventListener?.("change",()=>setTimeout(fit,80));document.addEventListener("visibilitychange",()=>{if(document.hidden)last=performance.now()});
+$("#sound").textContent=soundOn?"sound on":"sound off";renderPicker();fit();draw();
+})();
+</script></body></html>
