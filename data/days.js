@@ -2,6 +2,18 @@ window.DAILY_GAME_START = "2026-08-22";
 
 window.DAILY_ENTRIES = [
   {
+    date: "2026-09-11",
+    title: "Bellows",
+    type: "Forge heat control",
+    description: "Work a forge with one large bellows handle. Pump air into the coal bed, anticipate the iron's thermal lag, hold each piece inside its working-temperature band, then pull it before scale ruins the job across eight increasingly narrow heats.",
+    accent: "#e45a2a",
+    preview: "games/2026-09-11/preview.svg",
+    game: "games/2026-09-11/index.html",
+    article: "articles/2026-09-11.html",
+    articleTitle: "Why old code was shaped like a piece of cardboard",
+    articleDescription: "IBM's 80-column punched card was a physical data format before it became a programming convention. FORTRAN mapped labels, continuation marks, source text and identifiers onto fixed card columns."
+  },
+  {
     date: "2026-09-10",
     title: "Ground Glass",
     type: "Manual camera focus",
