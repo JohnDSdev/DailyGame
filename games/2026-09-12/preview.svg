@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+<title id="t">Kitework</title><desc id="d">A red and yellow stunt kite carving through striped aerial gates against a blue screen-printed sky.</desc>
+<rect width="1200" height="800" fill="#75c7dc"/>
+<g opacity=".18" fill="#f3e8c8"><ellipse cx="180" cy="150" rx="170" ry="34"/><ellipse cx="890" cy="265" rx="220" ry="42"/><ellipse cx="530" cy="620" rx="190" ry="36"/></g>
+<g stroke="#152a52" stroke-width="16" fill="none" stroke-dasharray="42 24">
+<path d="M100 560H410"/><path d="M760 365h330"/><path d="M190 190h300"/>
+</g>
+<g fill="#f2c84b" stroke="#152a52" stroke-width="12">
+<path d="M90 530l-34 30 34 30z"/><path d="M420 530l34 30-34 30z"/>
+<path d="M750 335l-34 30 34 30z"/><path d="M1100 335l34 30-34 30z"/>
+<path d="M180 160l-34 30 34 30z"/><path d="M500 160l34 30-34 30z"/>
+</g>
+<path d="M520 710C610 620 610 535 690 470S805 350 690 275" fill="none" stroke="#e4482c" stroke-width="15"/>
+<g transform="translate(690 470) rotate(-15)" stroke="#152a52" stroke-width="14" stroke-linejoin="round">
+<path d="M0-115L92 0 0 72-92 0Z" fill="#e4482c"/>
+<path d="M0-115V72L-92 0Z" fill="#f2c84b"/>
+</g>
+<path d="M675 515L400 800M705 515L800 800" stroke="#152a52" stroke-width="8"/>
+<text x="64" y="742" fill="#152a52" font-family="Arial Black,Arial,sans-serif" font-size="116" font-weight="900" letter-spacing="-7">KITEWORK</text>
+<text x="70" y="790" fill="#152a52" font-family="Arial,sans-serif" font-size="28" font-weight="800" letter-spacing="8">TWO LINES · EIGHT COURSES</text>
+</svg>
